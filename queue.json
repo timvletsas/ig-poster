@@ -384,6 +384,34 @@
       ],
       "account": "17841413162252894",
       "source": "thomas-sykutera-image"
+    },
+    {
+      "id": "mwmgp3bks4hm",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgp3bks4hm/1.jpg",
+        "media/mwmgp3bks4hm/2.jpg",
+        "media/mwmgp3bks4hm/3.jpg",
+        "media/mwmgp3bks4hm/4.jpg",
+        "media/mwmgp3bks4hm/5.jpg"
+      ],
+      "caption": "“Table for four”\n\nDescribe this in one word 👇\n\nWanna see more cool stuff made by pure skill and talent? Follow us!\n\n🎨 @valmulas.art\n\n#3droyals #characterdesign #cgart #3dmodel #3dartwork",
+      "artist": "@valmulas.art",
+      "category": "Characters",
+      "scheduled_at": "2026-12-03T06:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:35:45.643Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "53ab96f5e766e0794a678965e6393592",
+        "099cba6d56692da0a1d8a9ea88a09a14",
+        "c1bf82ba878eb8e7490376ac19337069",
+        "a02407ec301a2f47b0d1cb0b4d63cab2",
+        "7dad709f9334a6a9467e38adf5f9686f"
+      ],
+      "account": "17841413162252894",
+      "source": "valeria-mulas-dinnertable-final"
     }
   ]
 }
