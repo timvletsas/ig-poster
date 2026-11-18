@@ -436,6 +436,26 @@
       ],
       "account": "17841413162252894",
       "source": "valeria-mulas-ref"
+    },
+    {
+      "id": "mwmgpf8us3kp",
+      "type": "IMAGE",
+      "media": [
+        "media/mwmgpf8us3kp/1.jpg"
+      ],
+      "caption": "“Chuckie Finster - portrait”\n\nHit 🔥 or ❄️ in the comments 👇\n\nSome artists just make it look easy 😮‍💨\n\n🎨 @Pawel Swierczynski on artstation\n\n#3droyals #3dcharacter #digitalart #3dmodeling #3dcommunity",
+      "artist": "@Pawel Swierczynski",
+      "category": "Characters",
+      "scheduled_at": "2026-12-04T20:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:36:00.850Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "2eb8d693671eb6f9b47294bd401df512"
+      ],
+      "account": "17841413162252894",
+      "source": "pawel-swierczynski-fireboy-portrait"
     }
   ]
 }
