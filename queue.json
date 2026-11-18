@@ -160,6 +160,36 @@
       ],
       "account": "17841413162252894",
       "source": "jordi-soriano-claydoble"
+    },
+    {
+      "id": "mwmgnng0gw4a",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgnng0gw4a/1.jpg",
+        "media/mwmgnng0gw4a/2.jpg",
+        "media/mwmgnng0gw4a/3.jpg",
+        "media/mwmgnng0gw4a/4.jpg",
+        "media/mwmgnng0gw4a/5.jpg",
+        "media/mwmgnng0gw4a/6.jpg"
+      ],
+      "caption": "“Jack Skellinghton”\n\nHow many hours do you think this took? ⏳\n\nThe amount of care in this piece is amazing 🤯\n\n🎨 @Jordi Soriano\n\n🎨 Jordi Soriano in artstation\n\n#3droyals #characterdesign #3dartist #cgi #3dmodel",
+      "artist": "@Jordi Soriano",
+      "category": "Characters",
+      "scheduled_at": "2026-11-26T06:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:34:39.212Z",
+      "tag_artist": false,
+      "collab": false,
+      "hashes": [
+        "3f6134d2760f725a22899ba954195587",
+        "c799362c9d57b5dae910fba1fd5954ca",
+        "b7aeba5560fbf8272a824b8c66124344",
+        "55ebcda7e5a7ed32d986f425a2efd0d7",
+        "cd138c7c7553d66530bf05cd721dfe03",
+        "8e64929e8259d8e93e5b3bae2d190d42"
+      ],
+      "account": "17841413162252894",
+      "source": "jordi-soriano-final-ndia2-insta"
     }
   ]
 }
