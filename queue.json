@@ -586,6 +586,32 @@
       ],
       "account": "17841413162252894",
       "source": "-freecompress-untitled-camera-1-001"
+    },
+    {
+      "id": "mwmgqaov3guv",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgqaov3guv/1.jpg",
+        "media/mwmgqaov3guv/2.jpg",
+        "media/mwmgqaov3guv/3.jpg",
+        "media/mwmgqaov3guv/4.jpg"
+      ],
+      "caption": "“Ramon and the Dinos”\n\nDescribe this in one word 👇\n\nCreativity and skill at its best 🔥\n\n🎨 @lucascordda\n\n#3droyals #characterdesign #3dmodel #3ddesign #3dartwork",
+      "artist": "@lucascordda",
+      "category": "Characters",
+      "scheduled_at": "2026-12-07T07:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:36:41.787Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "18db7ea2a737fa3ef846ec2300b4ad7c",
+        "b1f4639285a20cff795a7bdd54ffce2b",
+        "fd3b777549558960c68e0c78cae8043c",
+        "ef453b94d7c737c3d2ef056b059baccd"
+      ],
+      "account": "17841413162252894",
+      "source": "lucas-cordda-clay-turnaround-copy"
     }
   ]
 }
