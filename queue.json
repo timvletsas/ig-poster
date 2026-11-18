@@ -866,6 +866,34 @@
       ],
       "account": "17841413162252894",
       "source": "francisca-panchi-traini-francisca-dramarender-v03"
+    },
+    {
+      "id": "mwmgrxwzxswe",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgrxwzxswe/1.jpg",
+        "media/mwmgrxwzxswe/2.mp4",
+        "media/mwmgrxwzxswe/3.jpg",
+        "media/mwmgrxwzxswe/4.jpg",
+        "media/mwmgrxwzxswe/5.jpg"
+      ],
+      "caption": "“Butler”\n\nShow the artist some love in the comments ❤️\n\nIncredible craftsmanship in every detail 🔥\n\n🎨 @egeguncu\n\n#3droyals #characterdesign #cgi #3dart #3ddesign",
+      "artist": "@egeguncu",
+      "category": "Characters",
+      "scheduled_at": "2026-12-20T07:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:37:58.739Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "b2bbeff4c8d632a7c96c7e816c6a0b5c",
+        "cc5b9ffd245e47d28565bee59b59d89f",
+        "baa12dbf2e8757e769f1536678d718f9",
+        "47f07760ff2b9667bf2808e8870f8cb9",
+        "489782e4307c9fd716fc81ebb0f6845e"
+      ],
+      "account": "17841413162252894",
+      "source": "clayturn"
     }
   ]
 }
