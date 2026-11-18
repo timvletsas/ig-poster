@@ -356,6 +356,34 @@
       ],
       "account": "17841413162252894",
       "source": "akriti-ros-fv-render-optimiado"
+    },
+    {
+      "id": "mwmgoxjvtb9a",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgoxjvtb9a/1.jpg",
+        "media/mwmgoxjvtb9a/2.jpg",
+        "media/mwmgoxjvtb9a/3.jpg",
+        "media/mwmgoxjvtb9a/4.jpg",
+        "media/mwmgoxjvtb9a/5.jpg"
+      ],
+      "caption": "“Xanthe - The Blood of Dawnwalker”\n\nDrop a 🔥 if this deserves more attention\n\nTalent on another level. Follow for more like this 🚀\n\n🎨 Thomas Sykutera on Artstation\n\n#3droyals #characterdesign #3drender #3dart #3dcommunity",
+      "artist": "@Thomas Sykutera",
+      "category": "Characters",
+      "scheduled_at": "2026-12-02T06:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:35:38.145Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "c1c8664b6c313aff1bb9f71884c46857",
+        "6ef67ebab2381106d1dcb18283a7b3ed",
+        "37273609fce2910642923620c9b87c72",
+        "742625c114cf8b14fb070dbaf745d977",
+        "ba161e894b9fd34862b4fcacd74f885e"
+      ],
+      "account": "17841413162252894",
+      "source": "thomas-sykutera-image"
     }
   ]
 }
