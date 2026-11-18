@@ -718,6 +718,32 @@
       ],
       "account": "17841413162252894",
       "source": "geison-araujo-closeup"
+    },
+    {
+      "id": "mwmgr1y11hvh",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgr1y11hvh/1.jpg",
+        "media/mwmgr1y11hvh/2.jpg",
+        "media/mwmgr1y11hvh/3.jpg",
+        "media/mwmgr1y11hvh/4.jpg"
+      ],
+      "caption": "“Drakula”\n\nHow many hours do you think this took? ⏳\n\nHard work you can see. Show the artist some love 🙌\n\n🎨 @geison_araujo_\n\n#3droyals #characterdesign #cgi #3dmodel #3drender",
+      "artist": "@geison_araujo_",
+      "category": "Characters",
+      "scheduled_at": "2026-12-17T06:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:37:17.364Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "c53980d1aed823f03eba405a8b1350a5",
+        "a69f8b0a17bdc77e0ef49c8d48441a23",
+        "7053e3a2cb32f9140f4d8e754f8c9f0f",
+        "b2bd5caee75462538eb530740caa741b"
+      ],
+      "account": "17841413162252894",
+      "source": "geison-araujo-dracula-comp-clay"
     }
   ]
 }
