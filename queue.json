@@ -840,6 +840,32 @@
       ],
       "account": "17841413162252894",
       "source": "geison-araujo-back"
+    },
+    {
+      "id": "mwmgrsibt5ya",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgrsibt5ya/1.jpg",
+        "media/mwmgrsibt5ya/2.jpg",
+        "media/mwmgrsibt5ya/3.jpg",
+        "media/mwmgrsibt5ya/4.jpg"
+      ],
+      "caption": "“Musical Charm”\n\nWant to see more from this artist? Let us know 👇\n\nHours of work in a single piece. Respect to the artist 🙌\n\n🎨 @Francisca (PANCHI) Traini\n\n#3droyals #3dcharacter #cgi #3dart #3dcommunity",
+      "artist": "@Francisca (PANCHI) Traini",
+      "category": "Characters",
+      "scheduled_at": "2026-12-18T20:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:37:51.558Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "2213f8ae72728b19684312088cb2bb7c",
+        "bf242aed61af515064afcd2ba5955166",
+        "16480015585e13322756e50e927fab15",
+        "2db48056ebc11f97e6404a1a16ab113b"
+      ],
+      "account": "17841413162252894",
+      "source": "francisca-panchi-traini-francisca-dramarender-v03"
     }
   ]
 }
