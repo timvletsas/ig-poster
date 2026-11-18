@@ -744,6 +744,30 @@
       ],
       "account": "17841413162252894",
       "source": "geison-araujo-dracula-comp-clay"
+    },
+    {
+      "id": "mwmgr83brbzp",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgr83brbzp/1.jpg",
+        "media/mwmgr83brbzp/2.jpg",
+        "media/mwmgr83brbzp/3.jpg"
+      ],
+      "caption": "“Loish”\n\nWhat's your favorite part? 👇\n\nThis is what talent looks like in 3D ✨\n\n🎨 @geison_araujo_\n\n#3droyals #3dcharacter #3ddesign #3dmodel #3dartwork",
+      "artist": "@geison_araujo_",
+      "category": "Characters",
+      "scheduled_at": "2026-12-19T10:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:37:25.169Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "6e656f33a8a30507b280387921e4269c",
+        "32da76ddc8deff4eb01f1f5da18cb14b",
+        "f4c0b22067e4bacce1d2ec7fe16610cf"
+      ],
+      "account": "17841413162252894",
+      "source": "geison-araujo-loish-clay"
     }
   ]
 }
