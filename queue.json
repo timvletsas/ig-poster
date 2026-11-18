@@ -412,6 +412,30 @@
       ],
       "account": "17841413162252894",
       "source": "valeria-mulas-dinnertable-final"
+    },
+    {
+      "id": "mwmgp9q43tls",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgp9q43tls/1.jpg",
+        "media/mwmgp9q43tls/2.jpg",
+        "media/mwmgp9q43tls/3.jpg"
+      ],
+      "caption": "“Veteran of cut”\n\nMasterpiece or not? 👇\n\nBuilt polygon by polygon. Absolute mastery 💎\n\n🎨 @valmulas.art\n\n#3droyals #3dcharacter #3drender #3dmodel #3dcommunity",
+      "artist": "@valmulas.art",
+      "category": "Characters",
+      "scheduled_at": "2026-12-05T10:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:35:53.890Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "bcce77fcf8fbbd12ecb16bc08c8f0dcd",
+        "70700bb9cefde0716abe22b60c5f687c",
+        "7e002f367ef2cd688f810272369d5c39"
+      ],
+      "account": "17841413162252894",
+      "source": "valeria-mulas-ref"
     }
   ]
 }
