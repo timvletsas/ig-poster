@@ -56,6 +56,28 @@
       ],
       "account": "17841413162252894",
       "source": "elias-villagomez-samurai-web01"
+    },
+    {
+      "id": "mwmgmpqsuhn8",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgmpqsuhn8/1.mp4",
+        "media/mwmgmpqsuhn8/2.mp4"
+      ],
+      "caption": "“Waltz Cycle”\n\nDrop a 🔥 if this deserves more attention\n\nFeaturing the best 3D artists out there. Follow so you never miss one 👑\n\n🎨 @galravidtal\n\n#3droyals #characterdesign #3dmodeling #3dart #3dmodel",
+      "artist": "@galravidtal",
+      "category": "Characters",
+      "scheduled_at": "2026-11-20T20:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:33:54.678Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "f187674f6ae5bf190fb7d63a92daf815",
+        "17f80b34d8ab42975fc94974a2144a78"
+      ],
+      "account": "17841413162252894",
+      "source": "waltz-comp-breakdown"
     }
   ]
 }
