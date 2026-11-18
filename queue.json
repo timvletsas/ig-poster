@@ -14,7 +14,7 @@
       "artist": "@canoebandcom",
       "category": "Characters",
       "scheduled_at": "2026-11-18T16:12:06.811Z",
-      "status": "scheduled",
+      "status": "posted",
       "created_at": "2026-11-18T16:12:06.811Z",
       "tag_artist": true,
       "collab": true,
@@ -25,7 +25,11 @@
         "b24905efddec693870ae0d1cbb42aa3a",
         "b3ce9915eeb8f141dd1df7af9b81059f"
       ],
-      "account": "17841413162252894"
+      "account": "17841413162252894",
+      "posted_at": "2026-11-18T16:12:35.360036Z",
+      "ig_media_id": "17954901777049005",
+      "permalink": "https://www.instagram.com/p/Df46KTTktTp/",
+      "error": null
     }
   ]
 }
