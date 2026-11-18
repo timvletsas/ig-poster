@@ -78,6 +78,32 @@
       ],
       "account": "17841413162252894",
       "source": "waltz-comp-breakdown"
+    },
+    {
+      "id": "mwmgn5o11lw0",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgn5o11lw0/1.jpg",
+        "media/mwmgn5o11lw0/2.jpg",
+        "media/mwmgn5o11lw0/3.jpg",
+        "media/mwmgn5o11lw0/4.jpg"
+      ],
+      "caption": "“El Maestro Solar”\n\nRate this artwork from 1 to 10 👇\n\nSome artists just make it look easy 😮‍💨\n\n🎨 @elias_villagomez\n\n#3droyals #3dcharacter #substancepainter #characterdesign #fantasyart",
+      "artist": "@elias_villagomez",
+      "category": "Characters",
+      "scheduled_at": "2026-11-21T10:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:34:15.529Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "1157c2a39c7ccc5f69dca190f7994055",
+        "73b0283bd95ef9ceb7aa0f4c7fca1bb2",
+        "e7c81bb4017713de649cd2fdd6a7e490",
+        "35e938edf155ce0a308594b25bd35d1a"
+      ],
+      "account": "17841413162252894",
+      "source": "elias-villagomez-img-1342"
     }
   ]
 }
