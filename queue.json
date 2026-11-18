@@ -694,6 +694,30 @@
       ],
       "account": "17841413162252894",
       "source": "adobe-express-turntable"
+    },
+    {
+      "id": "mwmgqwzq73b2",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgqwzq73b2/1.jpg",
+        "media/mwmgqwzq73b2/2.jpg",
+        "media/mwmgqwzq73b2/3.jpg"
+      ],
+      "caption": "“Jason”\n\nGive this artist a 👑 in the comments\n\nWhen skill meets patience, this happens ✨\n\n🎨 @geison_araujo_\n\n#3droyals #characterdesign #3dartist #cgi #3dartwork",
+      "artist": "@geison_araujo_",
+      "category": "Characters",
+      "scheduled_at": "2026-12-15T10:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:37:10.743Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "dfb38525b1e8b36b252977d9830a40b0",
+        "1a20ff009ee5a3d370980a300238e1ea",
+        "ffd1b79303a87ada83c20ec9c3b23dc5"
+      ],
+      "account": "17841413162252894",
+      "source": "geison-araujo-closeup"
     }
   ]
 }
