@@ -280,6 +280,30 @@
       ],
       "account": "17841413162252894",
       "source": "andrey-gordeev"
+    },
+    {
+      "id": "mwmgobwlle12",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgobwlle12/1.jpg",
+        "media/mwmgobwlle12/2.mp4",
+        "media/mwmgobwlle12/3.mp4"
+      ],
+      "caption": "“Rick and Morty Fan Art”\n\nGive this artist a 👑 in the comments\n\nThe 3D community never stops raising the bar 🚀\n\n🎨 @sina_piruzfar\n\n#3droyals #characterdesign #3ddesign #3dartist #digitalart",
+      "artist": "@sina_piruzfar",
+      "category": "Characters",
+      "scheduled_at": "2026-11-29T07:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:35:10.015Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "7cc643ae87e1a5378fdc7d7a365756dc",
+        "351d2d722e0cd91d8f3797d22b453e89",
+        "af706f0b4852deaa4575c78185fe5b2c"
+      ],
+      "account": "17841413162252894",
+      "source": "sina-piruzfar-final"
     }
   ]
 }
