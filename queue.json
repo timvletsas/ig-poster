@@ -612,6 +612,32 @@
       ],
       "account": "17841413162252894",
       "source": "lucas-cordda-clay-turnaround-copy"
+    },
+    {
+      "id": "mwmgqfmi5lav",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgqfmi5lav/1.jpg",
+        "media/mwmgqfmi5lav/2.jpg",
+        "media/mwmgqfmi5lav/3.jpg",
+        "media/mwmgqfmi5lav/4.jpg"
+      ],
+      "caption": "“Stylized Succubus”\n\nTag a friend who needs to see this 👀\n\nPure skill, zero shortcuts. Follow for daily 3D inspiration 👑\n\n🎨 @bozhidar_tomov\n\n#3droyals #3dcharacter #3dillustration #cgart #3ddesign",
+      "artist": "@bozhidar_tomov",
+      "category": "Characters",
+      "scheduled_at": "2026-12-09T06:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:36:48.109Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "ef0ae7612fdb50a017442189171337a4",
+        "eaf23d9629bb98aaf5b5373e0a9def3b",
+        "783578256bfb2790c937a080ef914830",
+        "a4505b85051504a8dc7c5538c0afcf32"
+      ],
+      "account": "17841413162252894",
+      "source": "bozhidar-tomov-render-short-dynamic"
     }
   ]
 }
