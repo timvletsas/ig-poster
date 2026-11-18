@@ -258,6 +258,28 @@
       ],
       "account": "17841413162252894",
       "source": "andrey-gordeev-mosquito"
+    },
+    {
+      "id": "mwmgo7v0uoeo",
+      "type": "CAROUSEL",
+      "media": [
+        "media/mwmgo7v0uoeo/1.jpg",
+        "media/mwmgo7v0uoeo/2.jpg"
+      ],
+      "caption": "“Hana Ad Poster”\n\nWhat detail caught your eye first? 👇\n\nHours of work in a single piece. Respect to the artist 🙌\n\n🎨 @gordei2d\n\n#3droyals #characterdesign #3dart #3ddesign #cgi",
+      "artist": "@gordei2d",
+      "category": "Characters",
+      "scheduled_at": "2026-11-27T20:00:00.000Z",
+      "status": "scheduled",
+      "created_at": "2026-11-18T18:35:04.669Z",
+      "tag_artist": true,
+      "collab": false,
+      "hashes": [
+        "be57808007db2cc3685ba618da2e5214",
+        "6d8f3e8aa2344c4b4874817f734657e9"
+      ],
+      "account": "17841413162252894",
+      "source": "andrey-gordeev"
     }
   ]
 }
