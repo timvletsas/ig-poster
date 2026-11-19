@@ -2,7 +2,7 @@
 Runs on GitHub Actions. Publishes every post in queue.json whose time has come.
 Supports IMAGE, CAROUSEL, REELS and STORIES.
 """
-import os, sys, json, time, subprocess, datetime, urllib.parse
+import os, re, sys, json, time, subprocess, datetime, urllib.parse
 import requests
 
 API = "https://graph.facebook.com/v24.0"
@@ -85,8 +85,11 @@ def make_cover(post, num):
 
 
 def handle(post):
+    """Instagram username to tag/invite, or '' (names with spaces = ArtStation artists, not on Instagram)."""
     a = (post.get("artist") or "").strip().lstrip("@")
-    return a if a and a.lower() != "artist" else ""
+    if re.search(r"\b(on|in)\s+art\s?station\b", post.get("caption", ""), re.I):
+        return ""  # credited as an ArtStation artist in the caption -> not on Instagram
+    return a if re.fullmatch(r"[A-Za-z0-9._]{1,30}", a) and a.lower() != "artist" else ""
 
 
 def week_no(queue_posts, extra_posted):
