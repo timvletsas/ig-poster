@@ -47,7 +47,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:33:46.350Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "5abe6ba7b16a613d947a1eaddb5ed64d",
         "13a2683811af3ec6326c6a0e2f9017c3",
@@ -71,7 +71,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:33:54.678Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "f187674f6ae5bf190fb7d63a92daf815",
         "17f80b34d8ab42975fc94974a2144a78"
@@ -95,7 +95,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:15.529Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "1157c2a39c7ccc5f69dca190f7994055",
         "73b0283bd95ef9ceb7aa0f4c7fca1bb2",
@@ -121,7 +121,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:21.943Z",
       "tag_artist": false,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "3b709b8e65c759f9dfe130cd8ae124d8",
         "110d96e4b6c69cc86ed2de31788cf385",
@@ -149,7 +149,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:29.650Z",
       "tag_artist": false,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "4e9efa049b829d1419c4b7484a88e86e",
         "43cdbc9e3e8573cd66236836b8ca02d1",
@@ -179,7 +179,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:39.212Z",
       "tag_artist": false,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "3f6134d2760f725a22899ba954195587",
         "c799362c9d57b5dae910fba1fd5954ca",
@@ -208,7 +208,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:48.248Z",
       "tag_artist": false,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "8ed2add7cab3d9439a441999e81af556",
         "508c6861652b9653ea81d9fc9185a3e8",
@@ -232,7 +232,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:56.395Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "3f9fb5c71a76d01fc0b5a68d23fc38ea"
       ],
@@ -252,7 +252,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:00.454Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "c247ac4075885961e118aa202f76cbc7"
       ],
@@ -273,7 +273,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:04.669Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "be57808007db2cc3685ba618da2e5214",
         "6d8f3e8aa2344c4b4874817f734657e9"
@@ -296,7 +296,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:10.015Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "7cc643ae87e1a5378fdc7d7a365756dc",
         "351d2d722e0cd91d8f3797d22b453e89",
@@ -320,7 +320,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:22.492Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "38d2f21c708147ca4c8630de28114fd3",
         "fd6ea4a744bc080f30741042c51c18b3",
@@ -346,7 +346,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:29.754Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "1e68e570bedc0c9bf6c08d3ba4c52270",
         "2bca02cab34daf8fe1657b91675c5ac7",
@@ -374,7 +374,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:38.145Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "c1c8664b6c313aff1bb9f71884c46857",
         "6ef67ebab2381106d1dcb18283a7b3ed",
@@ -402,7 +402,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:45.643Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "53ab96f5e766e0794a678965e6393592",
         "099cba6d56692da0a1d8a9ea88a09a14",
@@ -428,7 +428,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:53.890Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "bcce77fcf8fbbd12ecb16bc08c8f0dcd",
         "70700bb9cefde0716abe22b60c5f687c",
@@ -450,7 +450,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:00.850Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "2eb8d693671eb6f9b47294bd401df512"
       ],
@@ -474,7 +474,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:05.309Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "aab691c9bf1ea7d7d7e470f9bf62458a",
         "ef8f0bf33b3b20b29b061209ff336dd6",
@@ -501,7 +501,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:14.061Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "71371e73484cc6285f1416c033e6753e",
         "a67653363bd82a8beecd32f2fe9fea42",
@@ -526,7 +526,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:20.980Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "97b99eda7b91b6d1f08d789bcb86f300",
         "8787c239dd0e28fd0dab51c1d23b54a0",
@@ -550,7 +550,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:27.108Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "8185b2956b8c13e8a8012b2a2bbcdcf9",
         "229c7e94a4c23622b268bf8928bd3235",
@@ -576,7 +576,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:33.295Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "cd09550c817b56fec0434a31f36b44a0",
         "49b31a7a03122d1d639c8b5f458e402a",
@@ -603,7 +603,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:41.787Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "18db7ea2a737fa3ef846ec2300b4ad7c",
         "b1f4639285a20cff795a7bdd54ffce2b",
@@ -629,7 +629,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:48.109Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "ef0ae7612fdb50a017442189171337a4",
         "eaf23d9629bb98aaf5b5373e0a9def3b",
@@ -658,7 +658,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:54.916Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "65046c1677854287a3b76e636d4428d4",
         "230ec649838d150e67455dd2b4db08b8",
@@ -686,7 +686,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:03.779Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "8fff3ed3f44dc7693fbb0bc8c7d6c08d",
         "770384034b3dbcce21ec46d5cf1bb25a",
@@ -710,7 +710,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:10.743Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "dfb38525b1e8b36b252977d9830a40b0",
         "1a20ff009ee5a3d370980a300238e1ea",
@@ -735,7 +735,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:17.364Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "c53980d1aed823f03eba405a8b1350a5",
         "a69f8b0a17bdc77e0ef49c8d48441a23",
@@ -760,7 +760,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:25.169Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "6e656f33a8a30507b280387921e4269c",
         "32da76ddc8deff4eb01f1f5da18cb14b",
@@ -783,7 +783,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:31.703Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "c70c56906c75383500857dd27e7024d5",
         "d8df4fcec14ee17b6f5762d4c7f13fe7"
@@ -805,7 +805,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:37.096Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "6a33af0732b6c38106123a678fd5e9c6",
         "bda8998bf518fff3dc8adfa61c09f416"
@@ -830,7 +830,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:42.481Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "0d1166cf8a690847d85500fe07a96b78",
         "ba665a3425a61afa55b2f1cf52eb35cd",
@@ -857,7 +857,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:51.558Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "2213f8ae72728b19684312088cb2bb7c",
         "bf242aed61af515064afcd2ba5955166",
@@ -884,7 +884,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:58.739Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "b2bbeff4c8d632a7c96c7e816c6a0b5c",
         "cc5b9ffd245e47d28565bee59b59d89f",
@@ -911,7 +911,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:38:09.083Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "293ea54385e8e0898501f2a5b0bc9fb4",
         "ad17432bf52877d50e8000ab94843828",
@@ -939,7 +939,7 @@
       "status": "scheduled",
       "created_at": "2026-11-18T18:38:16.416Z",
       "tag_artist": true,
-      "collab": false,
+      "collab": true,
       "hashes": [
         "3b7a4f8350bd2f4569916f0b84ebcb8f",
         "70245a7c1e68a89a519a557a4d618dd0",
