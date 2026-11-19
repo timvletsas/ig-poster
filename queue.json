@@ -40,10 +40,10 @@
         "media/mwmgmj6sk5pk/3.jpg",
         "media/mwmgmj6sk5pk/4.mp4"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Montreal Samurai”\n\nDrop a 🔥 if this deserves more attention\n\nInspiration for every 3D artist out there 💡\n\n🎨 @elias_villagomez\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #blender3d #gameart #3dmodeling",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Montreal Samurai”\n\nDrop a 🔥 if this deserves more attention\n\nInspiration for every 3D artist out there 💡\n\n🎨 @elias_villagomez\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #blender3d #gameart #3dmodeling",
       "artist": "@elias_villagomez",
       "category": "Characters",
-      "scheduled_at": "2026-11-19T06:00:00.000Z",
+      "scheduled_at": "2026-11-23T07:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:33:46.350Z",
       "tag_artist": true,
@@ -55,7 +55,12 @@
         "2f870dab0cf727c7753d6022b53f4ef0"
       ],
       "account": "17841413162252894",
-      "source": "elias-villagomez-samurai-web01"
+      "source": "elias-villagomez-samurai-web01",
+      "spot": true,
+      "spotlight": {
+        "title": "Montreal Samurai"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgmpqsuhn8",
@@ -64,10 +69,10 @@
         "media/mwmgmpqsuhn8/1.mp4",
         "media/mwmgmpqsuhn8/2.mp4"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Waltz Cycle”\n\nDrop a 🔥 if this deserves more attention\n\nFeaturing the best 3D artists out there. Follow so you never miss one 👑\n\n🎨 @galravidtal\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3dmodeling #3dart #3dmodel",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Waltz Cycle”\n\nDrop a 🔥 if this deserves more attention\n\nFeaturing the best 3D artists out there. Follow so you never miss one 👑\n\n🎨 @galravidtal\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3dmodeling #3dart #3dmodel",
       "artist": "@galravidtal",
       "category": "Characters",
-      "scheduled_at": "2026-11-20T20:00:00.000Z",
+      "scheduled_at": "2026-11-24T10:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:33:54.678Z",
       "tag_artist": true,
@@ -77,7 +82,12 @@
         "17f80b34d8ab42975fc94974a2144a78"
       ],
       "account": "17841413162252894",
-      "source": "waltz-comp-breakdown"
+      "source": "waltz-comp-breakdown",
+      "spot": false,
+      "spotlight": {
+        "title": "Waltz Cycle"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgn5o11lw0",
@@ -88,10 +98,10 @@
         "media/mwmgn5o11lw0/3.jpg",
         "media/mwmgn5o11lw0/4.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“El Maestro Solar”\n\nRate this artwork from 1 to 10 👇\n\nSome artists just make it look easy 😮‍💨\n\n🎨 @elias_villagomez\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #3dcharacter #substancepainter #characterdesign #fantasyart",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“El Maestro Solar”\n\nRate this artwork from 1 to 10 👇\n\nSome artists just make it look easy 😮‍💨\n\n🎨 @elias_villagomez\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #3dcharacter #substancepainter #characterdesign #fantasyart",
       "artist": "@elias_villagomez",
       "category": "Characters",
-      "scheduled_at": "2026-11-21T10:00:00.000Z",
+      "scheduled_at": "2026-11-30T07:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:15.529Z",
       "tag_artist": true,
@@ -103,7 +113,12 @@
         "35e938edf155ce0a308594b25bd35d1a"
       ],
       "account": "17841413162252894",
-      "source": "elias-villagomez-img-1342"
+      "source": "elias-villagomez-img-1342",
+      "spot": true,
+      "spotlight": {
+        "title": "El Maestro Solar"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgnas5k1l4",
@@ -114,10 +129,10 @@
         "media/mwmgnas5k1l4/3.mp4",
         "media/mwmgnas5k1l4/4.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“She's a smoker”\n\nWhat detail caught your eye first? 👇\n\nThe amount of care in this piece is amazing 🤯\n\n🎨 Jordi Soriano on artstation\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #3dcommunity #digitalart #3dmodeling",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“She's a smoker”\n\nWhat detail caught your eye first? 👇\n\nThe amount of care in this piece is amazing 🤯\n\n🎨 Jordi Soriano on artstation\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #3dcommunity #digitalart #3dmodeling",
       "artist": "@Jordi Soriano",
       "category": "Characters",
-      "scheduled_at": "2026-11-22T07:00:00.000Z",
+      "scheduled_at": "2026-11-25T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:21.943Z",
       "tag_artist": false,
@@ -129,7 +144,12 @@
         "fd357f4c2877f0c46485e4c6641fe935"
       ],
       "account": "17841413162252894",
-      "source": "33531a2e7bcc1bef2272add6ce765ee6-smoker-turntable"
+      "source": "33531a2e7bcc1bef2272add6ce765ee6-smoker-turntable",
+      "spot": true,
+      "spotlight": {
+        "title": "She's a smoker"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgngdmgnuh",
@@ -142,10 +162,10 @@
         "media/mwmgngdmgnuh/5.jpg",
         "media/mwmgngdmgnuh/6.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Edward Scissorhands”\n\nSave this for inspiration 📌\n\nHard work you can see. Show the artist some love 🙌\n\n🎨 Jordi Soriano in artstation\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #3dmodeling #3ddesign #3dart",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Edward Scissorhands”\n\nSave this for inspiration 📌\n\nHard work you can see. Show the artist some love 🙌\n\n🎨 Jordi Soriano in artstation\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #3dmodeling #3ddesign #3dart",
       "artist": "@Jordi Soriano",
       "category": "Characters",
-      "scheduled_at": "2026-11-24T10:00:00.000Z",
+      "scheduled_at": "2026-12-01T10:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:29.650Z",
       "tag_artist": false,
@@ -159,7 +179,12 @@
         "35c07d35c39e63e4400a2f4defb081f5"
       ],
       "account": "17841413162252894",
-      "source": "jordi-soriano-claydoble"
+      "source": "jordi-soriano-claydoble",
+      "spot": true,
+      "spotlight": {
+        "title": "Edward Scissorhands"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgnng0gw4a",
@@ -172,10 +197,10 @@
         "media/mwmgnng0gw4a/5.jpg",
         "media/mwmgnng0gw4a/6.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Jack Skellinghton”\n\nHow many hours do you think this took? ⏳\n\nThe amount of care in this piece is amazing 🤯\n\n🎨 Jordi Soriano in artstation\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3dartist #cgi #3dmodel",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Jack Skellinghton”\n\nHow many hours do you think this took? ⏳\n\nThe amount of care in this piece is amazing 🤯\n\n🎨 Jordi Soriano in artstation\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3dartist #cgi #3dmodel",
       "artist": "@Jordi Soriano",
       "category": "Characters",
-      "scheduled_at": "2026-11-26T06:00:00.000Z",
+      "scheduled_at": "2026-12-07T07:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:39.212Z",
       "tag_artist": false,
@@ -189,7 +214,12 @@
         "8e64929e8259d8e93e5b3bae2d190d42"
       ],
       "account": "17841413162252894",
-      "source": "jordi-soriano-final-ndia2-insta"
+      "source": "jordi-soriano-final-ndia2-insta",
+      "spot": true,
+      "spotlight": {
+        "title": "Jack Skellinghton"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgnuqxyci7",
@@ -201,10 +231,10 @@
         "media/mwmgnuqxyci7/4.jpg",
         "media/mwmgnuqxyci7/5.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Sally 3D”\n\nRate this artwork from 1 to 10 👇\n\nProof that 3D is real art 🎨\n\n🎨 Jordi Soriano in artstation\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3dartist #3dart #3dmodeling",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Sally 3D”\n\nRate this artwork from 1 to 10 👇\n\nProof that 3D is real art 🎨\n\n🎨 Jordi Soriano in artstation\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3dartist #3dart #3dmodeling",
       "artist": "@Jordi Soriano",
       "category": "Characters",
-      "scheduled_at": "2026-11-28T10:00:00.000Z",
+      "scheduled_at": "2026-12-14T07:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:48.248Z",
       "tag_artist": false,
@@ -217,7 +247,12 @@
         "cf77282828f4046beec76481f05dfb77"
       ],
       "account": "17841413162252894",
-      "source": "jordi-soriano-luigi-lucarelli-halloween-town-insta"
+      "source": "jordi-soriano-luigi-lucarelli-halloween-town-insta",
+      "spot": true,
+      "spotlight": {
+        "title": "Sally 3D"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgo1igizlz",
@@ -225,10 +260,10 @@
       "media": [
         "media/mwmgo1igizlz/1.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Seagull Fighter”\n\nTag someone who would love this 👇\n\nWhen skill meets patience, this happens ✨\n\n🎨 @gordei2d\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #3dmodeling #3drender #digitalart",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Seagull Fighter”\n\nTag someone who would love this 👇\n\nWhen skill meets patience, this happens ✨\n\n🎨 @gordei2d\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #3dmodeling #3drender #digitalart",
       "artist": "@gordei2d",
       "category": "Characters",
-      "scheduled_at": "2026-11-23T07:00:00.000Z",
+      "scheduled_at": "2026-11-26T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:34:56.395Z",
       "tag_artist": true,
@@ -237,7 +272,12 @@
         "3f9fb5c71a76d01fc0b5a68d23fc38ea"
       ],
       "account": "17841413162252894",
-      "source": "andrey-gordeev-image-2026-10-15-21-02"
+      "source": "andrey-gordeev-image-2026-10-15-21-02",
+      "spot": true,
+      "spotlight": {
+        "title": "Seagull Fighter"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgo4m6akjx",
@@ -245,10 +285,10 @@
       "media": [
         "media/mwmgo4m6akjx/1.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Mosquiro”\n\nWant to see more from this artist? Let us know 👇\n\nThis is what talent looks like in 3D ✨\n\n🎨 @gordei2d\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #characterdesign #3dartwork #3dart #digitalart",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Mosquiro”\n\nWant to see more from this artist? Let us know 👇\n\nThis is what talent looks like in 3D ✨\n\n🎨 @gordei2d\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #characterdesign #3dartwork #3dart #digitalart",
       "artist": "@gordei2d",
       "category": "Characters",
-      "scheduled_at": "2026-11-25T06:00:00.000Z",
+      "scheduled_at": "2026-12-02T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:00.454Z",
       "tag_artist": true,
@@ -257,7 +297,12 @@
         "c247ac4075885961e118aa202f76cbc7"
       ],
       "account": "17841413162252894",
-      "source": "andrey-gordeev-mosquito"
+      "source": "andrey-gordeev-mosquito",
+      "spot": true,
+      "spotlight": {
+        "title": "Mosquiro"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgo7v0uoeo",
@@ -266,10 +311,10 @@
         "media/mwmgo7v0uoeo/1.jpg",
         "media/mwmgo7v0uoeo/2.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Hana Ad Poster”\n\nWhat detail caught your eye first? 👇\n\nHours of work in a single piece. Respect to the artist 🙌\n\n🎨 @gordei2d\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3dart #3ddesign #cgi",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Hana Ad Poster”\n\nWhat detail caught your eye first? 👇\n\nHours of work in a single piece. Respect to the artist 🙌\n\n🎨 @gordei2d\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3dart #3ddesign #cgi",
       "artist": "@gordei2d",
       "category": "Characters",
-      "scheduled_at": "2026-11-27T20:00:00.000Z",
+      "scheduled_at": "2026-12-08T10:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:04.669Z",
       "tag_artist": true,
@@ -279,7 +324,12 @@
         "6d8f3e8aa2344c4b4874817f734657e9"
       ],
       "account": "17841413162252894",
-      "source": "andrey-gordeev"
+      "source": "andrey-gordeev",
+      "spot": true,
+      "spotlight": {
+        "title": "Hana Ad Poster"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgobwlle12",
@@ -289,10 +339,10 @@
         "media/mwmgobwlle12/2.mp4",
         "media/mwmgobwlle12/3.mp4"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Rick and Morty Fan Art”\n\nGive this artist a 👑 in the comments\n\nThe 3D community never stops raising the bar 🚀\n\n🎨 @sina_piruzfar\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3ddesign #3dartist #digitalart",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Rick and Morty Fan Art”\n\nGive this artist a 👑 in the comments\n\nThe 3D community never stops raising the bar 🚀\n\n🎨 @sina_piruzfar\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3ddesign #3dartist #digitalart",
       "artist": "@sina_piruzfar",
       "category": "Characters",
-      "scheduled_at": "2026-11-29T07:00:00.000Z",
+      "scheduled_at": "2026-11-27T20:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:10.015Z",
       "tag_artist": true,
@@ -303,7 +353,12 @@
         "af706f0b4852deaa4575c78185fe5b2c"
       ],
       "account": "17841413162252894",
-      "source": "sina-piruzfar-final"
+      "source": "sina-piruzfar-final",
+      "spot": true,
+      "spotlight": {
+        "title": "Rick and Morty Fan Art"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgolk88fwd",
@@ -313,10 +368,10 @@
         "media/mwmgolk88fwd/2.mp4",
         "media/mwmgolk88fwd/3.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“BlueBeard - 3D Stylized Character”\n\nWhat's your favorite part? 👇\n\nThis is why we love the 3D community ❤️\n\n🎨 @sina_piruzfar\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #3dcharacter #3dart #3dillustration #3dmodel",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“BlueBeard - 3D Stylized Character”\n\nWhat's your favorite part? 👇\n\nThis is why we love the 3D community ❤️\n\n🎨 @sina_piruzfar\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #3dcharacter #3dart #3dillustration #3dmodel",
       "artist": "@sina_piruzfar",
       "category": "Characters",
-      "scheduled_at": "2026-12-01T10:00:00.000Z",
+      "scheduled_at": "2026-12-04T20:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:22.492Z",
       "tag_artist": true,
@@ -327,7 +382,12 @@
         "3bb9018e1af7d83758931fd8f2ac0555"
       ],
       "account": "17841413162252894",
-      "source": "processsssss0001-0144"
+      "source": "processsssss0001-0144",
+      "spot": true,
+      "spotlight": {
+        "title": "BlueBeard - 3D Stylized Character"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgoqt0454y",
@@ -339,10 +399,10 @@
         "media/mwmgoqt0454y/4.jpg",
         "media/mwmgoqt0454y/5.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Pirate Girl”\n\nTag a friend who needs to see this 👀\n\nIncredible craftsmanship in every detail 🔥\n\n🎨 @blvke.3d\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #cgart #3ddesign #3dartist",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Pirate Girl”\n\nTag a friend who needs to see this 👀\n\nIncredible craftsmanship in every detail 🔥\n\n🎨 @blvke.3d\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #cgart #3ddesign #3dartist",
       "artist": "@blvke.3d",
       "category": "Characters",
-      "scheduled_at": "2026-11-30T07:00:00.000Z",
+      "scheduled_at": "2026-12-03T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:29.754Z",
       "tag_artist": true,
@@ -355,7 +415,12 @@
         "50d8aef610f1f3c06fa50b013f946f65"
       ],
       "account": "17841413162252894",
-      "source": "akriti-ros-fv-render-optimiado"
+      "source": "akriti-ros-fv-render-optimiado",
+      "spot": true,
+      "spotlight": {
+        "title": "Pirate Girl"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgoxjvtb9a",
@@ -367,10 +432,10 @@
         "media/mwmgoxjvtb9a/4.jpg",
         "media/mwmgoxjvtb9a/5.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Xanthe - The Blood of Dawnwalker”\n\nDrop a 🔥 if this deserves more attention\n\nTalent on another level. Follow for more like this 🚀\n\n🎨 Thomas Sykutera on Artstation\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3drender #3dart #3dcommunity",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Xanthe - The Blood of Dawnwalker”\n\nDrop a 🔥 if this deserves more attention\n\nTalent on another level. Follow for more like this 🚀\n\n🎨 Thomas Sykutera on Artstation\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3drender #3dart #3dcommunity",
       "artist": "@Thomas Sykutera",
       "category": "Characters",
-      "scheduled_at": "2026-12-02T06:00:00.000Z",
+      "scheduled_at": "2026-12-09T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:38.145Z",
       "tag_artist": true,
@@ -383,7 +448,12 @@
         "ba161e894b9fd34862b4fcacd74f885e"
       ],
       "account": "17841413162252894",
-      "source": "thomas-sykutera-image"
+      "source": "thomas-sykutera-image",
+      "spot": true,
+      "spotlight": {
+        "title": "Xanthe - The Blood of Dawnwalker"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgp3bks4hm",
@@ -395,10 +465,10 @@
         "media/mwmgp3bks4hm/4.jpg",
         "media/mwmgp3bks4hm/5.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Table for four”\n\nDescribe this in one word 👇\n\nWanna see more cool stuff made by pure skill and talent? Follow us!\n\n🎨 @valmulas.art\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #cgart #3dmodel #3dartwork",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Table for four”\n\nDescribe this in one word 👇\n\nWanna see more cool stuff made by pure skill and talent? Follow us!\n\n🎨 @valmulas.art\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #cgart #3dmodel #3dartwork",
       "artist": "@valmulas.art",
       "category": "Characters",
-      "scheduled_at": "2026-12-03T06:00:00.000Z",
+      "scheduled_at": "2026-12-10T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:45.643Z",
       "tag_artist": true,
@@ -411,7 +481,12 @@
         "7dad709f9334a6a9467e38adf5f9686f"
       ],
       "account": "17841413162252894",
-      "source": "valeria-mulas-dinnertable-final"
+      "source": "valeria-mulas-dinnertable-final",
+      "spot": true,
+      "spotlight": {
+        "title": "Table for four"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgp9q43tls",
@@ -421,10 +496,10 @@
         "media/mwmgp9q43tls/2.jpg",
         "media/mwmgp9q43tls/3.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Veteran of cut”\n\nMasterpiece or not? 👇\n\nBuilt polygon by polygon. Absolute mastery 💎\n\n🎨 @valmulas.art\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #3dcharacter #3drender #3dmodel #3dcommunity",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Veteran of cut”\n\nMasterpiece or not? 👇\n\nBuilt polygon by polygon. Absolute mastery 💎\n\n🎨 @valmulas.art\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #3dcharacter #3drender #3dmodel #3dcommunity",
       "artist": "@valmulas.art",
       "category": "Characters",
-      "scheduled_at": "2026-12-05T10:00:00.000Z",
+      "scheduled_at": "2026-12-15T10:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:35:53.890Z",
       "tag_artist": true,
@@ -435,7 +510,12 @@
         "7e002f367ef2cd688f810272369d5c39"
       ],
       "account": "17841413162252894",
-      "source": "valeria-mulas-ref"
+      "source": "valeria-mulas-ref",
+      "spot": true,
+      "spotlight": {
+        "title": "Veteran of cut"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgpf8us3kp",
@@ -443,10 +523,10 @@
       "media": [
         "media/mwmgpf8us3kp/1.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Chuckie Finster - portrait”\n\nHit 🔥 or ❄️ in the comments 👇\n\nSome artists just make it look easy 😮‍💨\n\n🎨 @Pawel Swierczynski on artstation\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #digitalart #3dmodeling #3dcommunity",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Chuckie Finster - portrait”\n\nHit 🔥 or ❄️ in the comments 👇\n\nSome artists just make it look easy 😮‍💨\n\n🎨 @Pawel Swierczynski on artstation\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #digitalart #3dmodeling #3dcommunity",
       "artist": "@Pawel Swierczynski",
       "category": "Characters",
-      "scheduled_at": "2026-12-04T20:00:00.000Z",
+      "scheduled_at": "2026-12-11T20:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:00.850Z",
       "tag_artist": true,
@@ -455,7 +535,12 @@
         "2eb8d693671eb6f9b47294bd401df512"
       ],
       "account": "17841413162252894",
-      "source": "pawel-swierczynski-fireboy-portrait"
+      "source": "pawel-swierczynski-fireboy-portrait",
+      "spot": true,
+      "spotlight": {
+        "title": "Chuckie Finster - portrait"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgpidjkje0",
@@ -467,10 +552,10 @@
         "media/mwmgpidjkje0/4.jpg",
         "media/mwmgpidjkje0/5.mp4"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\nOn a scale of 1–10, how good is this? 👇\n\nFeaturing the best 3D artists out there. Follow so you never miss one 👑\n\n🎨 @嗦两口粉 in artstation\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #3dcharacter #3dart #3dmodel #3ddesign",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\nOn a scale of 1–10, how good is this? 👇\n\nFeaturing the best 3D artists out there. Follow so you never miss one 👑\n\n🎨 @嗦两口粉 in artstation\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #3dcharacter #3dart #3dmodel #3ddesign",
       "artist": "@嗦两口粉",
       "category": "Characters",
-      "scheduled_at": "2026-12-06T07:00:00.000Z",
+      "scheduled_at": "2026-12-16T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:05.309Z",
       "tag_artist": true,
@@ -483,7 +568,12 @@
         "e3fa80983bdf8309b81001a6dbc2ebc7"
       ],
       "account": "17841413162252894",
-      "source": "-c1"
+      "source": "-c1",
+      "spot": true,
+      "spotlight": {
+        "title": ""
+      },
+      "nominee": true
     },
     {
       "id": "mwmgpp6rns50",
@@ -494,10 +584,10 @@
         "media/mwmgpp6rns50/3.jpg",
         "media/mwmgpp6rns50/4.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Fifty shades valentine edition”\n\nShow the artist some love in the comments ❤️\n\nInspiration for every 3D artist out there 💡\n\n🎨 @嗦两口粉 in artstation\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3dart #3drender #digitalart",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Fifty shades valentine edition”\n\nShow the artist some love in the comments ❤️\n\nInspiration for every 3D artist out there 💡\n\n🎨 @嗦两口粉 in artstation\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3dart #3drender #digitalart",
       "artist": "@嗦两口粉",
       "category": "Characters",
-      "scheduled_at": "2026-12-08T10:00:00.000Z",
+      "scheduled_at": "2026-12-21T07:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:14.061Z",
       "tag_artist": true,
@@ -509,7 +599,12 @@
         "e7007773880da70319dcd5895312f5eb"
       ],
       "account": "17841413162252894",
-      "source": "-freecompress-freecompress-untitled-main-camera-004"
+      "source": "-freecompress-freecompress-untitled-main-camera-004",
+      "spot": true,
+      "spotlight": {
+        "title": "Fifty shades valentine edition"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgpulauuf6",
@@ -519,10 +614,10 @@
         "media/mwmgpulauuf6/2.jpg",
         "media/mwmgpulauuf6/3.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Both righteous and evil Gekko - Valorant fanfiction”\n\nTag someone who would love this 👇\n\nBookmark this one, you will want to see it again 📌\n\n🎨 @嗦两口粉 in artstation\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #3dmodel #3dcommunity #digitalart",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Both righteous and evil Gekko - Valorant fanfiction”\n\nTag someone who would love this 👇\n\nBookmark this one, you will want to see it again 📌\n\n🎨 @嗦两口粉 in artstation\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #3dmodel #3dcommunity #digitalart",
       "artist": "@嗦两口粉",
       "category": "Characters",
-      "scheduled_at": "2026-12-10T06:00:00.000Z",
+      "scheduled_at": "2026-12-28T07:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:20.980Z",
       "tag_artist": true,
@@ -533,7 +628,12 @@
         "7536124a9294c27b904f30b9849d6d0c"
       ],
       "account": "17841413162252894",
-      "source": ""
+      "source": "",
+      "spot": true,
+      "spotlight": {
+        "title": "Both righteous and evil Gekko - Valorant fanfiction"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgpzb45xm1",
@@ -543,10 +643,10 @@
         "media/mwmgpzb45xm1/2.jpg",
         "media/mwmgpzb45xm1/3.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\nName this Villain? 👇\n\nYour daily dose of amazing 3D art. Follow for more 👑\n\n🎨 @嗦两口粉 in artstation\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #characterdesign #cgi #3dmodel #3dcommunity",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\nName this Villain? 👇\n\nYour daily dose of amazing 3D art. Follow for more 👑\n\n🎨 @嗦两口粉 in artstation\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #characterdesign #cgi #3dmodel #3dcommunity",
       "artist": "@嗦两口粉",
       "category": "Characters",
-      "scheduled_at": "2026-12-12T10:00:00.000Z",
+      "scheduled_at": "2027-01-04T07:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:27.108Z",
       "tag_artist": true,
@@ -557,7 +657,12 @@
         "298977cda7c2eb5781746782b3cad48f"
       ],
       "account": "17841413162252894",
-      "source": ""
+      "source": "",
+      "spot": true,
+      "spotlight": {
+        "title": ""
+      },
+      "nominee": true
     },
     {
       "id": "mwmgq3wslmq5",
@@ -569,10 +674,10 @@
         "media/mwmgq3wslmq5/4.jpg",
         "media/mwmgq3wslmq5/5.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\nRate this artwork from 1 to 10 👇\n\nTalent like this deserves to be seen. Share it with someone 🙏\n\n🎨 @嗦两口粉\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #3dcharacter #cgi #3dmodel #3dartwork",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\nRate this artwork from 1 to 10 👇\n\nTalent like this deserves to be seen. Share it with someone 🙏\n\n🎨 @嗦两口粉\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #3dcharacter #cgi #3dmodel #3dartwork",
       "artist": "@嗦两口粉",
       "category": "Characters",
-      "scheduled_at": "2026-12-14T07:00:00.000Z",
+      "scheduled_at": "2027-01-07T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:33.295Z",
       "tag_artist": true,
@@ -585,7 +690,12 @@
         "630c07c050d49a9cb24fe72df9d7f322"
       ],
       "account": "17841413162252894",
-      "source": "-freecompress-untitled-camera-1-001"
+      "source": "-freecompress-untitled-camera-1-001",
+      "spot": true,
+      "spotlight": {
+        "title": ""
+      },
+      "nominee": true
     },
     {
       "id": "mwmgqaov3guv",
@@ -596,10 +706,10 @@
         "media/mwmgqaov3guv/3.jpg",
         "media/mwmgqaov3guv/4.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Ramon and the Dinos”\n\nDescribe this in one word 👇\n\nCreativity and skill at its best 🔥\n\n🎨 @lucascordda\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3dmodel #3ddesign #3dartwork",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Ramon and the Dinos”\n\nDescribe this in one word 👇\n\nCreativity and skill at its best 🔥\n\n🎨 @lucascordda\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3dmodel #3ddesign #3dartwork",
       "artist": "@lucascordda",
       "category": "Characters",
-      "scheduled_at": "2026-12-07T07:00:00.000Z",
+      "scheduled_at": "2026-12-17T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:41.787Z",
       "tag_artist": true,
@@ -611,7 +721,12 @@
         "ef453b94d7c737c3d2ef056b059baccd"
       ],
       "account": "17841413162252894",
-      "source": "lucas-cordda-clay-turnaround-copy"
+      "source": "lucas-cordda-clay-turnaround-copy",
+      "spot": true,
+      "spotlight": {
+        "title": "Ramon and the Dinos"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgqfmi5lav",
@@ -622,10 +737,10 @@
         "media/mwmgqfmi5lav/3.jpg",
         "media/mwmgqfmi5lav/4.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Stylized Succubus”\n\nTag a friend who needs to see this 👀\n\nPure skill, zero shortcuts. Follow for daily 3D inspiration 👑\n\n🎨 @bozhidar_tomov\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #3dcharacter #3dillustration #cgart #3ddesign",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Stylized Succubus”\n\nTag a friend who needs to see this 👀\n\nPure skill, zero shortcuts. Follow for daily 3D inspiration 👑\n\n🎨 @bozhidar_tomov\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #3dcharacter #3dillustration #cgart #3ddesign",
       "artist": "@bozhidar_tomov",
       "category": "Characters",
-      "scheduled_at": "2026-12-09T06:00:00.000Z",
+      "scheduled_at": "2026-12-18T20:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:48.109Z",
       "tag_artist": true,
@@ -637,7 +752,12 @@
         "a4505b85051504a8dc7c5538c0afcf32"
       ],
       "account": "17841413162252894",
-      "source": "bozhidar-tomov-render-short-dynamic"
+      "source": "bozhidar-tomov-render-short-dynamic",
+      "spot": true,
+      "spotlight": {
+        "title": "Stylized Succubus"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgqkrnl5o2",
@@ -651,10 +771,10 @@
         "media/mwmgqkrnl5o2/6.jpg",
         "media/mwmgqkrnl5o2/7.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Girls Sketches”\n\nVote which one do you like the most in the comments 👇\n\nProof that 3D is real art 🎨\n\n🎨 @bozhidar_tomov\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #digitalart #3dartist #cgi",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Girls Sketches”\n\nVote which one do you like the most in the comments 👇\n\nProof that 3D is real art 🎨\n\n🎨 @bozhidar_tomov\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #digitalart #3dartist #cgi",
       "artist": "@bozhidar_tomov",
       "category": "Characters",
-      "scheduled_at": "2026-12-11T20:00:00.000Z",
+      "scheduled_at": "2026-12-22T10:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:36:54.916Z",
       "tag_artist": true,
@@ -669,7 +789,12 @@
         "66032536afeac53a86b2c2f5a43c0fae"
       ],
       "account": "17841413162252894",
-      "source": "bozhidar-tomov"
+      "source": "bozhidar-tomov",
+      "spot": true,
+      "spotlight": {
+        "title": "Girls Sketches"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgqrrb6rfc",
@@ -679,10 +804,10 @@
         "media/mwmgqrrb6rfc/2.jpg",
         "media/mwmgqrrb6rfc/3.mp4"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Summertime”\n\nMasterpiece or not? 👇\n\nThe amount of care in this piece is amazing 🤯\n\n🎨 @Julia Rees in artstation\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #3dcharacter #3dmodeling #3dmodel #cgi",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Summertime”\n\nMasterpiece or not? 👇\n\nThe amount of care in this piece is amazing 🤯\n\n🎨 @Julia Rees in artstation\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #3dcharacter #3dmodeling #3dmodel #cgi",
       "artist": "@Julia Rees",
       "category": "Characters",
-      "scheduled_at": "2026-12-13T07:00:00.000Z",
+      "scheduled_at": "2026-12-23T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:03.779Z",
       "tag_artist": true,
@@ -693,7 +818,12 @@
         "c6ce4ad7e6184d772724eb7107b8da1a"
       ],
       "account": "17841413162252894",
-      "source": "adobe-express-turntable"
+      "source": "adobe-express-turntable",
+      "spot": true,
+      "spotlight": {
+        "title": "Summertime"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgqwzq73b2",
@@ -703,10 +833,10 @@
         "media/mwmgqwzq73b2/2.jpg",
         "media/mwmgqwzq73b2/3.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Jason”\n\nGive this artist a 👑 in the comments\n\nWhen skill meets patience, this happens ✨\n\n🎨 @geison_araujo_\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3dartist #cgi #3dartwork",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Jason”\n\nGive this artist a 👑 in the comments\n\nWhen skill meets patience, this happens ✨\n\n🎨 @geison_araujo_\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3dartist #cgi #3dartwork",
       "artist": "@geison_araujo_",
       "category": "Characters",
-      "scheduled_at": "2026-12-15T10:00:00.000Z",
+      "scheduled_at": "2026-12-24T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:10.743Z",
       "tag_artist": true,
@@ -717,7 +847,12 @@
         "ffd1b79303a87ada83c20ec9c3b23dc5"
       ],
       "account": "17841413162252894",
-      "source": "geison-araujo-closeup"
+      "source": "geison-araujo-closeup",
+      "spot": true,
+      "spotlight": {
+        "title": "Jason"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgr1y11hvh",
@@ -728,10 +863,10 @@
         "media/mwmgr1y11hvh/3.jpg",
         "media/mwmgr1y11hvh/4.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Drakula”\n\nHow many hours do you think this took? ⏳\n\nHard work you can see. Show the artist some love 🙌\n\n🎨 @geison_araujo_\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #cgi #3dmodel #3drender",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Drakula”\n\nHow many hours do you think this took? ⏳\n\nHard work you can see. Show the artist some love 🙌\n\n🎨 @geison_araujo_\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #cgi #3dmodel #3drender",
       "artist": "@geison_araujo_",
       "category": "Characters",
-      "scheduled_at": "2026-12-17T06:00:00.000Z",
+      "scheduled_at": "2026-12-29T10:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:17.364Z",
       "tag_artist": true,
@@ -743,7 +878,12 @@
         "b2bd5caee75462538eb530740caa741b"
       ],
       "account": "17841413162252894",
-      "source": "geison-araujo-dracula-comp-clay"
+      "source": "geison-araujo-dracula-comp-clay",
+      "spot": true,
+      "spotlight": {
+        "title": "Drakula"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgr83brbzp",
@@ -753,10 +893,10 @@
         "media/mwmgr83brbzp/2.jpg",
         "media/mwmgr83brbzp/3.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Loish”\n\nWhat's your favorite part? 👇\n\nThis is what talent looks like in 3D ✨\n\n🎨 @geison_araujo_\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #3ddesign #3dmodel #3dartwork",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Loish”\n\nWhat's your favorite part? 👇\n\nThis is what talent looks like in 3D ✨\n\n🎨 @geison_araujo_\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #3ddesign #3dmodel #3dartwork",
       "artist": "@geison_araujo_",
       "category": "Characters",
-      "scheduled_at": "2026-12-19T10:00:00.000Z",
+      "scheduled_at": "2027-01-05T10:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:25.169Z",
       "tag_artist": true,
@@ -767,7 +907,12 @@
         "f4c0b22067e4bacce1d2ec7fe16610cf"
       ],
       "account": "17841413162252894",
-      "source": "geison-araujo-loish-clay"
+      "source": "geison-araujo-loish-clay",
+      "spot": true,
+      "spotlight": {
+        "title": "Loish"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgrd74bixi",
@@ -776,10 +921,10 @@
         "media/mwmgrd74bixi/1.jpg",
         "media/mwmgrd74bixi/2.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Cobblepot”\n\nDrop a 🔥 if this deserves more attention\n\nPure skill, zero shortcuts. Follow for daily 3D inspiration 👑\n\n🎨 @geison_araujo_\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3dmodeling #3dillustration #3dart",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Cobblepot”\n\nDrop a 🔥 if this deserves more attention\n\nPure skill, zero shortcuts. Follow for daily 3D inspiration 👑\n\n🎨 @geison_araujo_\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3dmodeling #3dillustration #3dart",
       "artist": "@geison_araujo_",
       "category": "Characters",
-      "scheduled_at": "2026-12-21T07:00:00.000Z",
+      "scheduled_at": "2027-01-08T20:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:31.703Z",
       "tag_artist": true,
@@ -789,7 +934,12 @@
         "d8df4fcec14ee17b6f5762d4c7f13fe7"
       ],
       "account": "17841413162252894",
-      "source": "geison-araujo-clay-comp"
+      "source": "geison-araujo-clay-comp",
+      "spot": true,
+      "spotlight": {
+        "title": "Cobblepot"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgrhh7dkt7",
@@ -798,10 +948,10 @@
         "media/mwmgrhh7dkt7/1.jpg",
         "media/mwmgrhh7dkt7/2.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Just a girl”\n\nSave this for inspiration 📌\n\nTalent on another level. Follow for more like this 🚀\n\n🎨 @javierbenver\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3dartwork #digitalart #3ddesign",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Just a girl”\n\nSave this for inspiration 📌\n\nTalent on another level. Follow for more like this 🚀\n\n🎨 @javierbenver\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3dartwork #digitalart #3ddesign",
       "artist": "@javierbenver",
       "category": "Characters",
-      "scheduled_at": "2026-12-16T06:00:00.000Z",
+      "scheduled_at": "2026-12-25T20:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:37.096Z",
       "tag_artist": true,
@@ -811,7 +961,12 @@
         "bda8998bf518fff3dc8adfa61c09f416"
       ],
       "account": "17841413162252894",
-      "source": "javier-benver-casual-javierbenver01"
+      "source": "javier-benver-casual-javierbenver01",
+      "spot": true,
+      "spotlight": {
+        "title": "Just a girl"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgrl7k1uly",
@@ -823,10 +978,10 @@
         "media/mwmgrl7k1uly/4.jpg",
         "media/mwmgrl7k1uly/5.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Homer Zombie”\n\nOn a scale of 1–10, how good is this? 👇\n\nSome artists just make it look easy 😮‍💨\n\n🎨 @geison_araujo_\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #3dcharacter #3dillustration #3dartist #3ddesign",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Homer Zombie”\n\nOn a scale of 1–10, how good is this? 👇\n\nSome artists just make it look easy 😮‍💨\n\n🎨 @geison_araujo_\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #3dcharacter #3dillustration #3dartist #3ddesign",
       "artist": "@geison_araujo_",
       "category": "Characters",
-      "scheduled_at": "2026-12-23T06:00:00.000Z",
+      "scheduled_at": "2027-01-11T07:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:42.481Z",
       "tag_artist": true,
@@ -839,7 +994,12 @@
         "119fe40c0e095d1f3ffffb47fb45d3ee"
       ],
       "account": "17841413162252894",
-      "source": "geison-araujo-back"
+      "source": "geison-araujo-back",
+      "spot": true,
+      "spotlight": {
+        "title": "Homer Zombie"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgrsibt5ya",
@@ -850,10 +1010,10 @@
         "media/mwmgrsibt5ya/3.jpg",
         "media/mwmgrsibt5ya/4.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Musical Charm”\n\nWant to see more from this artist? Let us know 👇\n\nHours of work in a single piece. Respect to the artist 🙌\n\n🎨 @Francisca (PANCHI) Traini\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #cgi #3dart #3dcommunity",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Musical Charm”\n\nWant to see more from this artist? Let us know 👇\n\nHours of work in a single piece. Respect to the artist 🙌\n\n🎨 @Francisca (PANCHI) Traini\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #cgi #3dart #3dcommunity",
       "artist": "@Francisca (PANCHI) Traini",
       "category": "Characters",
-      "scheduled_at": "2026-12-18T20:00:00.000Z",
+      "scheduled_at": "2026-12-30T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:51.558Z",
       "tag_artist": true,
@@ -865,7 +1025,12 @@
         "2db48056ebc11f97e6404a1a16ab113b"
       ],
       "account": "17841413162252894",
-      "source": "francisca-panchi-traini-francisca-dramarender-v03"
+      "source": "francisca-panchi-traini-francisca-dramarender-v03",
+      "spot": true,
+      "spotlight": {
+        "title": "Musical Charm"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgrxwzxswe",
@@ -877,10 +1042,10 @@
         "media/mwmgrxwzxswe/4.jpg",
         "media/mwmgrxwzxswe/5.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Butler”\n\nShow the artist some love in the comments ❤️\n\nIncredible craftsmanship in every detail 🔥\n\n🎨 @egeguncu\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #cgi #3dart #3ddesign",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Butler”\n\nShow the artist some love in the comments ❤️\n\nIncredible craftsmanship in every detail 🔥\n\n🎨 @egeguncu\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #cgi #3dart #3ddesign",
       "artist": "@egeguncu",
       "category": "Characters",
-      "scheduled_at": "2026-12-20T07:00:00.000Z",
+      "scheduled_at": "2026-12-31T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:37:58.739Z",
       "tag_artist": true,
@@ -893,7 +1058,12 @@
         "489782e4307c9fd716fc81ebb0f6845e"
       ],
       "account": "17841413162252894",
-      "source": "clayturn"
+      "source": "clayturn",
+      "spot": true,
+      "spotlight": {
+        "title": "Butler"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgs635vnsl",
@@ -904,10 +1074,10 @@
         "media/mwmgs635vnsl/3.jpg",
         "media/mwmgs635vnsl/4.jpg"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Character Portrait”\n\nRate this artwork from 1 to 10 👇\n\nFeaturing the best 3D artists out there. Follow so you never miss one 👑\n\n🎨 @David Solomon\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3ddesign #3dart #3dartist",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Character Portrait”\n\nRate this artwork from 1 to 10 👇\n\nFeaturing the best 3D artists out there. Follow so you never miss one 👑\n\n🎨 @David Solomon\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3ddesign #3dart #3dartist",
       "artist": "@David Solomon",
       "category": "Characters",
-      "scheduled_at": "2026-12-22T10:00:00.000Z",
+      "scheduled_at": "2027-01-01T20:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:38:09.083Z",
       "tag_artist": true,
@@ -919,7 +1089,12 @@
         "946e158127e2d984f31cac83313cdc8b"
       ],
       "account": "17841413162252894",
-      "source": "david-solomon"
+      "source": "david-solomon",
+      "spot": true,
+      "spotlight": {
+        "title": "Character Portrait"
+      },
+      "nominee": true
     },
     {
       "id": "mwmgsbhhvhzu",
@@ -932,10 +1107,10 @@
         "media/mwmgsbhhvhzu/5.mp4",
         "media/mwmgsbhhvhzu/6.mp4"
       ],
-      "caption": "🏆 Featured artist #{week_no} of the week\n\n“Skull Girl”\n\nMasterpiece or not? 👇\n\nYour daily dose of amazing 3D art. Follow for more 👑\n\n🎨 @Luis Servin\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #3dcharacter #3dcommunity #3ddesign #3dartist",
+      "caption": "🏆 Nominee #{nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Skull Girl”\n\nMasterpiece or not? 👇\n\nYour daily dose of amazing 3D art. Follow for more 👑\n\n🎨 @Luis Servin\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #3dcharacter #3dcommunity #3ddesign #3dartist",
       "artist": "@Luis Servin",
       "category": "Characters",
-      "scheduled_at": "2026-12-24T06:00:00.000Z",
+      "scheduled_at": "2027-01-06T06:00:00.000Z",
       "status": "scheduled",
       "created_at": "2026-11-18T18:38:16.416Z",
       "tag_artist": true,
@@ -949,7 +1124,17 @@
         "cc82771842a932e6f542eb3fa6f186d7"
       ],
       "account": "17841413162252894",
-      "source": "luis-servin-skullgirl-r01"
+      "source": "luis-servin-skullgirl-r01",
+      "spot": true,
+      "spotlight": {
+        "title": "Skull Girl"
+      },
+      "nominee": true
     }
-  ]
+  ],
+  "cycle_cfg": {
+    "enabled": true,
+    "sat": "12:00",
+    "sun": "09:00"
+  }
 }

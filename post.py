@@ -67,21 +67,231 @@ def is_video(p):
     return p.lower().endswith(VIDEO_EXT)
 
 
-def make_cover(post, num):
-    """Render the branded Spotlight cover from the first artwork image and push it so Instagram can fetch it."""
-    from cover import render_cover
-    src = next(m for m in post["media"] if m != "COVER" and not is_video(m))
-    dst = os.path.join(os.path.dirname(src), "cover.jpg")
-    sp = post.get("spotlight") or {}
-    render_cover(src, dst, num, sp.get("title", ""), sp.get("artist", ""))
+TZ_NAME = "Europe/Athens"
+
+
+def local_now():
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.datetime.now(ZoneInfo(TZ_NAME))
+    except Exception:
+        return datetime.datetime.now(datetime.timezone.utc)
+
+
+def nominee_no():
+    """Mon=1 ... Fri=5 (Greece time)."""
+    return min(5, local_now().weekday() + 1)
+
+
+def push_files(paths, msg):
+    """Commit generated images and push them so Instagram can download them."""
     for attempt in range(4):
-        git("add", dst)
-        git("commit", "-m", f"cover for {post['id']}", check=False)
+        for pth in paths:
+            git("add", pth)
+        git("commit", "-m", msg, check=False)
         if git("push", "origin", f"HEAD:{BRANCH}", check=False).returncode == 0:
-            break
+            time.sleep(12)
+            return
         git("pull", "--rebase", "origin", BRANCH, check=False)
-    post["media"] = [dst if m == "COVER" else m for m in post["media"]]
-    time.sleep(12)
+    raise RuntimeError("could not push generated images")
+
+
+def build_spot(post):
+    """Nominee cover + artist slides + close-ups + 'vote on Saturday' end card."""
+    import spot
+    from PIL import Image
+    imgs = [m for m in post["media"] if not is_video(m)]
+    if not imgs:
+        return
+    src = imgs[0]
+    folder = os.path.dirname(src)
+    with Image.open(src) as im:
+        ratio = im.width / im.height
+    num = nominee_no()
+    sp = post.get("spotlight") or {}
+    cover, end = os.path.join(folder, "s_cover.jpg"), os.path.join(folder, "s_end.jpg")
+    spot.nominee_cover(src, cover, num, sp.get("title", ""), post.get("artist", ""))
+    spot.nominee_end(src, end, num, post.get("artist", ""), ratio)
+    free = 10 - len(post["media"]) - 2
+    details = []
+    if free > 0:
+        for i, box in enumerate(spot.detail_boxes(src, min(2, free), ratio)):
+            pth = os.path.join(folder, f"s_detail{i + 1}.jpg")
+            spot.detail_slide(src, pth, box, i + 1, ratio)
+            details.append(pth)
+    push_files([cover, end, *details], f"spotlight slides for {post['id']}")
+    post["media"] = [cover, *post["media"], *details, end]
+    post["type"] = "CAROUSEL"
+
+
+# ---------------- weekly cycle: Saturday vote, Sunday results ----------------
+def week_key(dt=None):
+    y, w, _ = (dt or local_now()).isocalendar()
+    return f"{y}-W{w:02d}"
+
+
+def at_or_after(hhmm):
+    h, m = map(int, hhmm.split(":"))
+    n = local_now()
+    return (n.hour, n.minute) >= (h, m)
+
+
+def week_nominees(q):
+    """Spotlight posts published Mon-Fri of the current week (max 5, in order)."""
+    now = local_now()
+    monday = (now - datetime.timedelta(days=now.weekday())).replace(hour=0, minute=0, second=0, microsecond=0)
+    out = []
+    for p in q["posts"]:
+        if p.get("status") != "posted" or not (p.get("nominee") or p.get("spot")) or not p.get("posted_at") or not p.get("ig_media_id"):
+            continue
+        t = datetime.datetime.fromisoformat(p["posted_at"].replace("Z", "+00:00")).astimezone(now.tzinfo)
+        if monday <= t and t.weekday() <= 4:
+            out.append((t, p))
+    out.sort(key=lambda x: x[0])
+    return [p for _, p in out][:5]
+
+
+def art_src(p):
+    """The artist's first image (skip our generated slides). Video-only posts: grab a frame."""
+    for m in p.get("media", []):
+        if not is_video(m) and "/s_" not in m and os.path.exists(m):
+            return m
+    for m in p.get("media", []):
+        if is_video(m) and os.path.exists(m):
+            frame = os.path.join(os.path.dirname(m), "s_frame.jpg")
+            if not os.path.exists(frame):
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "1", "-i", m, "-frames:v", "1", "-q:v", "2", frame], check=False)
+            if os.path.exists(frame):
+                return frame
+    return None
+
+
+def ig_handle(artist):
+    a = (artist or "").strip().lstrip("@")
+    return a if re.fullmatch(r"[A-Za-z0-9._]{1,30}", a) else ""
+
+
+def publish_images(paths, caption, tags=None, collaborators=None):
+    """Publish a carousel (or single image) from repo image paths. tags: list per slide of usernames."""
+    kids = []
+    for i, pth in enumerate(paths):
+        data = {"image_url": raw_url(pth), "is_carousel_item": "true"}
+        u = (tags or [None] * len(paths))[i]
+        if u:
+            data["user_tags"] = json.dumps([{"username": u, "x": 0.5, "y": 0.9}])
+        try:
+            k = api_post(f"{IG_ID}/media", data)["id"]
+        except Exception:
+            data.pop("user_tags", None)
+            k = api_post(f"{IG_ID}/media", data)["id"]
+        wait_ready(k); kids.append(k)
+    base = {"media_type": "CAROUSEL", "children": ",".join(kids), "caption": caption}
+    if collaborators:
+        try:
+            cid = api_post(f"{IG_ID}/media", {**base, "collaborators": json.dumps(collaborators[:3])})["id"]
+        except Exception as e:
+            log("  collaborators refused, posting without:", e)
+            cid = api_post(f"{IG_ID}/media", base)["id"]
+    else:
+        cid = api_post(f"{IG_ID}/media", base)["id"]
+    wait_ready(cid)
+    return api_post(f"{IG_ID}/media_publish", {"creation_id": cid})["id"]
+
+
+def publish_story(path):
+    cid = api_post(f"{IG_ID}/media", {"media_type": "STORIES", "image_url": raw_url(path)})["id"]
+    wait_ready(cid)
+    return api_post(f"{IG_ID}/media_publish", {"creation_id": cid})["id"]
+
+
+def count_votes(media_id, n):
+    votes, voters, url = [0] * n, set(), f"{API}/{media_id}/comments"
+    params = {"fields": "text,username", "limit": 50, "access_token": TOKEN}
+    for _ in range(40):
+        r = requests.get(url, params=params, timeout=60).json()
+        if "error" in r:
+            log("  can't read comments (needs instagram_manage_comments):", r["error"].get("message"))
+            return None
+        for c in r.get("data", []):
+            m = re.search(r"\b([1-9])\b", c.get("text", ""))
+            who = c.get("username") or c.get("id")
+            if m and 1 <= int(m.group(1)) <= n and who not in voters:
+                voters.add(who); votes[int(m.group(1)) - 1] += 1
+        url = (r.get("paging") or {}).get("next"); params = None
+        if not url: break
+    return votes
+
+
+def engagement(media_id):
+    r = requests.get(f"{API}/{media_id}", params={"fields": "like_count,comments_count", "access_token": TOKEN}, timeout=60).json()
+    return (r.get("like_count") or 0) + 3 * (r.get("comments_count") or 0)
+
+
+def run_cycle(q, cyc):
+    """Saturday: vote post + story. Sunday: podium + winner stories. Returns changed cycle state or None."""
+    import spot
+    cfg = q.get("cycle_cfg") or {}
+    if not cfg.get("enabled"):
+        return None
+    now, wk = local_now(), week_key()
+    state = dict(cyc.get(wk) or {})
+    folder = f"media/cycle/{wk}"
+    os.makedirs(folder, exist_ok=True)
+    # ---- Saturday vote
+    if now.weekday() == 5 and at_or_after(cfg.get("sat", "12:00")) and not state.get("vote_id"):
+        noms = [p for p in week_nominees(q) if art_src(p)]
+        if len(noms) < 2:
+            log("Cycle: not enough nominees this week for a vote:", len(noms)); state["vote_skipped"] = True
+            return {wk: state}
+        srcs = [art_src(p) for p in noms]; shorts = [spot.short(p.get("artist")) for p in noms]
+        cover = f"{folder}/vote_cover.jpg"; spot.vote_cover(srcs, shorts, cover)
+        slides = []
+        for i, (sp_, p) in enumerate(zip(srcs, noms)):
+            pth = f"{folder}/vote_{i + 1}.jpg"; spot.vote_slide(sp_, pth, i + 1, spot.credit(p.get("artist"))); slides.append(pth)
+        story = f"{folder}/vote_story.jpg"; spot.vote_story(srcs, shorts, story)
+        push_files([cover, *slides, story], f"vote {wk}")
+        lines = "\n".join(f"{i + 1} - {spot.credit(p.get('artist'))}" for i, p in enumerate(noms))
+        cap = (f"🗳 VOTE: Artwork of the Week\n\nComment the number of your favorite 👇\n\n{lines}\n\n"
+               f"🏆 Winners revealed tomorrow!\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dart #3dartist #artoftheweek #3dcommunity")
+        mid = publish_images([cover, *slides], cap, tags=[None] + [ig_handle(p.get("artist")) for p in noms])
+        state.update({"vote_id": mid, "nominees": [{"id": p["id"], "artist": p.get("artist"), "src": art_src(p), "media_id": p.get("ig_media_id")} for p in noms]})
+        log("Cycle: vote posted", mid)
+        try:
+            state["vote_story"] = publish_story(story)
+        except Exception as e:
+            log("  vote story failed:", e)
+        return {wk: state}
+    # ---- Sunday results
+    if now.weekday() == 6 and at_or_after(cfg.get("sun", "09:00")) and state.get("vote_id") and not state.get("results_id"):
+        noms = state["nominees"]; n = len(noms)
+        votes = count_votes(state["vote_id"], n)
+        eng = [engagement(x["media_id"]) if x.get("media_id") else 0 for x in noms]
+        use_votes = votes is not None and sum(votes) >= 5
+        score = [(votes[i] if use_votes else 0) * 100000 + eng[i] for i in range(n)]
+        order = sorted(range(n), key=lambda i: -score[i])[:3]
+        win = [noms[i] for i in order]
+        srcs = [w["src"] for w in win]; shorts = [spot.short(w["artist"]) for w in win]
+        pod = f"{folder}/podium.jpg"; spot.podium(srcs, shorts, pod)
+        slides, stories = [], []
+        for k, w in enumerate(win):
+            pth = f"{folder}/winner_{k + 1}.jpg"; spot.winner_slide(w["src"], pth, k + 1, spot.credit(w["artist"])); slides.append(pth)
+            st_ = f"{folder}/winner_story_{k + 1}.jpg"; spot.winner_story(w["src"], st_, k + 1, spot.credit(w["artist"])); stories.append(st_)
+        push_files([pod, *slides, *stories], f"results {wk}")
+        medal = ["🥇", "🥈", "🥉"]
+        lines = "\n".join(f"{medal[k]} {spot.credit(w['artist'])}" + (f" ({votes[order[k]]} votes)" if use_votes else "") for k, w in enumerate(win))
+        cap = (f"🏆 Artwork of the Week: RESULTS\n\n{lines}\n\nCongrats to the winners and thank you for voting! 👑\n"
+               f"New nominees start Monday, vote again on Saturday 🗳\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dart #3dartist #artoftheweek #3dcommunity")
+        collabs = list(dict.fromkeys(h for h in (ig_handle(w["artist"]) for w in win) if h))
+        mid = publish_images([pod, *slides], cap, tags=[None] + [ig_handle(w["artist"]) for w in win], collaborators=collabs)
+        state.update({"results_id": mid, "winners": [w["id"] for w in win], "votes": votes, "ranked_by": "votes" if use_votes else "engagement"})
+        log("Cycle: results posted", mid)
+        for k, st_ in enumerate(stories):
+            try:
+                publish_story(st_)
+            except Exception as e:
+                log(f"  winner story {k + 1} failed:", e)
+        return {wk: state}
+    return None
 
 
 def handle(post):
@@ -173,13 +383,15 @@ def snapshot():
     return stats
 
 
-def save(results, stats):
+def save(results, stats, cycle=None):
     """Write changes into the latest repo state and push (retries on conflicts)."""
     for attempt in range(5):
         git("fetch", "origin", BRANCH)
         git("reset", "--hard", f"origin/{BRANCH}")
-        if results:
+        if results or cycle:
             q = json.load(open("queue.json", encoding="utf-8"))
+            if cycle:
+                q.setdefault("cycle", {}).update(cycle)
             for p in q["posts"]:
                 if p["id"] in results:
                     p.update(results[p["id"]])
@@ -217,12 +429,13 @@ def main():
         num = week_no(q["posts"], sum(1 for r in results.values() if r["status"] == "posted"))
         if "{week_no}" in p.get("caption", ""):
             p["caption"] = p["caption"].replace("{week_no}", str(num))
-        if "COVER" in p.get("media", []):
+        if "{nominee_no}" in p.get("caption", ""):
+            p["caption"] = p["caption"].replace("{nominee_no}", str(nominee_no()))
+        if p.get("spot") and p["type"] in ("IMAGE", "CAROUSEL"):
             try:
-                make_cover(p, num)
+                build_spot(p)
             except Exception as e:
-                log("  cover failed, posting without it:", e)
-                p["media"] = [m for m in p["media"] if m != "COVER"]
+                log("  spotlight slides failed, posting the artwork only:", e)
         stamp = now.isoformat().replace("+00:00", "Z")
         try:
             try:
@@ -233,14 +446,22 @@ def main():
                     mid, link = publish(p, with_tags=False)
                 else:
                     raise
-            results[p["id"]] = {"status": "posted", "posted_at": stamp, "ig_media_id": mid, "permalink": link, "error": None, "caption": p.get("caption", "")}
+            results[p["id"]] = {"status": "posted", "posted_at": stamp, "ig_media_id": mid, "permalink": link, "error": None, "caption": p.get("caption", ""), "media": p.get("media"), "type": p.get("type")}
             log("  posted:", link)
         except Exception as e:
             results[p["id"]] = {"status": "failed", "error": str(e), "failed_at": stamp}
             log("  FAILED:", e)
     if not due:
         log("Nothing due.")
-    save(results, stats)
+    cyc_update = None
+    try:
+        q2 = json.load(open("queue.json", encoding="utf-8"))
+        for p in q2["posts"]:
+            if p["id"] in results: p.update(results[p["id"]])
+        cyc_update = run_cycle(q2, q2.get("cycle") or {})
+    except Exception as e:
+        log("Cycle error:", e)
+    save(results, stats, cyc_update)
     if any(r["status"] == "failed" for r in results.values()):
         sys.exit(1)
 
