@@ -37,31 +37,36 @@ def api_post(path, data):
 
 
 def wait_ready(cid, timeout=600):
-    start = time.time()
+    start = time.time(); last = None
     while time.time() - start < timeout:
         st = requests.get(f"{API}/{cid}", params={"fields": "status_code,status", "access_token": TOKEN}, timeout=60).json()
         code = st.get("status_code")
+        if st != last:
+            log("  processing:", st); last = st
         if code == "FINISHED":
             return
         if code in ("ERROR", "EXPIRED"):
             raise RuntimeError(f"Instagram could not process media: {st.get('status', code)}")
         time.sleep(6)
-    raise RuntimeError("Timed out waiting for Instagram to process media")
+    raise RuntimeError(f"Timed out waiting for Instagram to process media (last status: {last})")
 
 
-def video_container(path, extra):
-    """Upload a video directly (resumable); fall back to public URL."""
+def video_container(path, extra, ready_timeout=None):
+    """Upload a video directly (resumable). If that fails or stalls, use the public URL instead."""
     try:
         r = api_post(f"{IG_ID}/media", {**extra, "upload_type": "resumable"})
         size = os.path.getsize(path)
         with open(path, "rb") as f:
             up = requests.post(r["uri"], data=f, timeout=900, headers={
                 "Authorization": f"OAuth {TOKEN}", "offset": "0", "file_size": str(size)}).json()
+        log("  upload:", up)
         if not up.get("success", True) and "id" not in up:
             raise RuntimeError(str(up))
+        if ready_timeout:
+            wait_ready(r["id"], ready_timeout)
         return r["id"]
     except Exception as e:
-        log("Resumable upload failed, trying URL:", e)
+        log("Direct upload failed or stalled, trying public URL:", e)
         return api_post(f"{IG_ID}/media", {**extra, "video_url": raw_url(path)})["id"]
 
 
@@ -343,7 +348,7 @@ def publish(post, with_tags=True):
     if t == "IMAGE":
         cid = api_post(f"{IG_ID}/media", {"image_url": raw_url(media[0]), "caption": caption, **tag_img, **collab})["id"]
     elif t == "REELS":
-        cid = video_container(media[0], {"media_type": "REELS", "caption": caption, "share_to_feed": "true", **tag_vid, **collab})
+        cid = video_container(media[0], {"media_type": "REELS", "caption": caption, "share_to_feed": "true", **tag_vid, **collab}, ready_timeout=300)
     elif t == "STORIES":
         if is_video(media[0]):
             cid = video_container(media[0], {"media_type": "STORIES"})
