@@ -13,6 +13,7 @@ q = json.load(open("queue.json", encoding="utf-8"))
 idx = json.load(open(IDX, encoding="utf-8")) if os.path.exists(IDX) else {}
 sched = {p["id"]: p for p in q["posts"] if p.get("status") == "scheduled"}
 changed = False
+ENGINE = hashlib.sha1(open("spot.py", "rb").read() + open("post.py", "rb").read()).hexdigest()[:12]
 
 for pid in list(idx):
     if pid not in sched:
@@ -22,7 +23,7 @@ for pid, p in sched.items():
     t = datetime.datetime.fromisoformat(p["scheduled_at"].replace("Z", "+00:00")).astimezone(TZ)
     num = min(5, t.weekday() + 1)
     sig = hashlib.sha1(json.dumps([p["media"], p.get("spotlight"), p.get("artist"), p.get("caption"),
-                                   num, p.get("spot"), p["type"]], ensure_ascii=False).encode()).hexdigest()
+                                   num, p.get("spot"), p["type"], ENGINE], ensure_ascii=False).encode()).hexdigest()
     old = idx.get(pid)
     if old and old.get("sig") == sig and all(os.path.exists(m) for m in old["media"]):
         continue

@@ -33,6 +33,17 @@ def vshade(img, y0, y1, a0, a1):
     return Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), img, full)
 
 
+def grad_text(img, cx, y, text, px, maxw=960):
+    """Gradient headline centered at cx with its baseline at y, shrunk to fit maxw (never clipped)."""
+    f = fb(px)
+    while f.size > 20 and (f.getbbox(text, anchor="ms")[2] - f.getbbox(text, anchor="ms")[0]) > maxw:
+        f = fb(f.size - 4)
+    l, t, r, b = f.getbbox(text, anchor="ms"); p = 6
+    w, h = r - l + 2 * p, b - t + 2 * p
+    mk = Image.new("L", (w, h), 0); ImageDraw.Draw(mk).text((p - l, p - t), text, font=f, fill=255, anchor="ms")
+    img.paste(grad(w, h), (int(cx + l - p), int(y + t - p)), mk)
+
+
 def pill(img, x, y, text, font, fill=None, pad=(18, 10), color=WHITE, center=False):
     d = ImageDraw.Draw(img)
     tw = d.textlength(text, font=font)
@@ -115,21 +126,23 @@ def nominee_cover(src, dst, num, title, artist, total=5):
 
 
 def nominee_end(src, dst, num, artist, ratio):
-    W, H = 1080, int(round(1080 / ratio)); s = 1
-    img = blurred_bg(src, W, H); d = ImageDraw.Draw(img); cx = W / 2
-    y = H * .18
-    pill(img, cx, y, f"NOMINEE #{num} OF 5", fb(30), center=True); d = ImageDraw.Draw(img)
-    y += 120; d.text((cx, y), "VOTE ON", font=fb(64), fill=WHITE, anchor="ms")
-    y += 150; g = grad(760, 170); mask = Image.new("L", (760, 170), 0)
-    ImageDraw.Draw(mask).text((380, 150), "SATURDAY", font=fb(150), fill=255, anchor="ms"); img.paste(g, (int(cx - 380), int(y - 150)), mask)
-    d = ImageDraw.Draw(img)
-    y += 70; d.text((cx, y), "for the Artwork of the Week", font=fm(42), fill=WHITE, anchor="ms")
-    y += 60; d.text((cx, y), "Winners revealed on Sunday", font=fm(32), fill=(210, 210, 225), anchor="ms")
-    y += 70; d.rectangle([cx - 90, y, cx + 90, y + 3], fill=(120, 120, 140))
-    if artist: y += 80; d.text((cx, y), f"Art by {credit(artist)}", font=fb(44), fill=LILAC, anchor="ms")
-    y += 64; d.text((cx, y), f"Follow {BRAND} so you don't miss the vote", font=fm(32), fill=(225, 225, 235), anchor="ms")
-    d.text((cx, H - 52), "3D ROYALS", font=fb(26), fill=(230, 230, 240), anchor="ms")
-    accent_bar(img, s); img.save(dst, "JPEG", quality=92)
+    W, H = 1080, int(round(1080 / ratio))
+    img = blurred_bg(src, W, H); cx = W / 2
+    k = min(1.0, H / 1150)                       # shrink the layout on landscape / square posts
+    y = H * .5 - 520 * k                          # content block (~1040*k tall) centered vertically
+    pill(img, cx, y, f"NOMINEE #{num} OF 5", fb(30, k), center=True); d = ImageDraw.Draw(img)
+    y += 120 * k; d.text((cx, y), "VOTE ON", font=fb(64, k), fill=WHITE, anchor="ms")
+    y += 150 * k; grad_text(img, cx, y, "SATURDAY", int(150 * k), maxw=W - 120); d = ImageDraw.Draw(img)
+    y += 70 * k; d.text((cx, y), "for the Artwork of the Week", font=fm(42, k), fill=WHITE, anchor="ms")
+    y += 60 * k; d.text((cx, y), "Winners revealed on Sunday", font=fm(32, k), fill=(210, 210, 225), anchor="ms")
+    y += 70 * k; d.rectangle([cx - 90 * k, y, cx + 90 * k, y + 3], fill=(120, 120, 140))
+    if artist:
+        y += 80 * k; line = f"Art by {credit(artist)}"; f = fb(44, k)
+        while d.textlength(line, font=f) > W - 100 and f.size > 18: f = fb(f.size - 2)
+        d.text((cx, y), line, font=f, fill=LILAC, anchor="ms")
+    y += 64 * k; d.text((cx, y), f"Follow {BRAND} so you don't miss the vote", font=fm(32, k), fill=(225, 225, 235), anchor="ms")
+    d.text((cx, H - 52 * k), "3D ROYALS", font=fb(26, k), fill=(230, 230, 240), anchor="ms")
+    accent_bar(img, 1); img.save(dst, "JPEG", quality=92)
 
 
 def detail_boxes(src, k=2, ratio=0.8):
@@ -174,8 +187,7 @@ def thumb_with_num(src, size, num):
 def vote_cover(srcs, handles, dst, week_label=""):
     W, H = 1080, 1350; img = blurred_bg(srcs[0], W, H, .30); d = ImageDraw.Draw(img); cx = W / 2
     pill(img, cx, 56, "ARTWORK OF THE WEEK", fb(30), center=True); d = ImageDraw.Draw(img)
-    g = grad(700, 180); mk = Image.new("L", (700, 180), 0); ImageDraw.Draw(mk).text((350, 160), "VOTE", font=fb(170), fill=255, anchor="ms")
-    img.paste(g, (int(cx - 350), 120), mk); d = ImageDraw.Draw(img)
+    grad_text(img, cx, 280, "VOTE", 170); d = ImageDraw.Draw(img)
     d.text((cx, 352), "Comment the number of your favorite", font=fm(38), fill=WHITE, anchor="ms")
     n = len(srcs); size = 300; gap = 28
     rows = [srcs[:3], srcs[3:]] if n > 3 else [srcs]
@@ -204,8 +216,7 @@ def vote_slide(src, dst, num, handle, ratio=0.8):
 def vote_story(srcs, handles, dst):
     W, H = 1080, 1920; img = blurred_bg(srcs[0], W, H, .28); d = ImageDraw.Draw(img); cx = W / 2
     pill(img, cx, 250, "ARTWORK OF THE WEEK", fb(34), center=True); d = ImageDraw.Draw(img)
-    g = grad(820, 190); mk = Image.new("L", (820, 190), 0); ImageDraw.Draw(mk).text((410, 170), "VOTE NOW", font=fb(140), fill=255, anchor="ms")
-    img.paste(g, (int(cx - 410), 320), mk); d = ImageDraw.Draw(img)
+    grad_text(img, cx, 490, "VOTE NOW", 140); d = ImageDraw.Draw(img)
     size, gap = 300, 40; y = 540; k = 0
     for row in [srcs[:2], srcs[2:4], srcs[4:5]]:
         if not row: continue
@@ -228,8 +239,7 @@ def podium(srcs, handles, dst):
     """srcs/handles ordered 1st, 2nd, 3rd."""
     W, H = 1080, 1350; img = blurred_bg(srcs[0], W, H, .28); d = ImageDraw.Draw(img); cx = W / 2
     pill(img, cx, 56, "ARTWORK OF THE WEEK", fb(30), center=True); d = ImageDraw.Draw(img)
-    g = grad(820, 170); mk = Image.new("L", (820, 170), 0); ImageDraw.Draw(mk).text((410, 150), "RESULTS", font=fb(140), fill=255, anchor="ms")
-    img.paste(g, (int(cx - 410), 120), mk); d = ImageDraw.Draw(img)
+    grad_text(img, cx, 270, "RESULTS", 140); d = ImageDraw.Draw(img)
     cols = [(2, cx - 330, 330), (1, cx, 450), (3, cx + 330, 250)]   # place, center x, block height
     base = H - 90; size = 290
     for place, x, bh in cols:
