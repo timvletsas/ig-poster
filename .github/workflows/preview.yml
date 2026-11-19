@@ -22,7 +22,9 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests pillow numpy
-      - run: which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+      - name: ffmpeg for video frames (never blocks posting)
+        continue-on-error: true
+        run: which ffmpeg || pip install imageio-ffmpeg
       - run: |
           git config user.name "3d-poster-bot"
           git config user.email "actions@users.noreply.github.com"

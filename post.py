@@ -153,6 +153,17 @@ def week_nominees(q):
     return [p for _, p in out][:5]
 
 
+def ffmpeg_bin():
+    import shutil
+    if shutil.which("ffmpeg"):
+        return "ffmpeg"
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception:
+        return "ffmpeg"
+
+
 def art_src(p):
     """The artist's first image (skip our generated slides). Video-only posts: grab a frame."""
     for m in p.get("media", []):
@@ -162,7 +173,7 @@ def art_src(p):
         if is_video(m) and os.path.exists(m):
             frame = os.path.join(os.path.dirname(m), "s_frame.jpg")
             if not os.path.exists(frame):
-                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "1", "-i", m, "-frames:v", "1", "-q:v", "2", frame], check=False)
+                subprocess.run([ffmpeg_bin(), "-y", "-loglevel", "error", "-ss", "1", "-i", m, "-frames:v", "1", "-q:v", "2", frame], check=False)
             if os.path.exists(frame):
                 return frame
     return None
