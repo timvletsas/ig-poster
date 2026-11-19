@@ -1,0 +1,12 @@
+name: Check permissions
+on: workflow_dispatch
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -s "https://graph.facebook.com/v24.0/me/permissions?access_token=$IG_TOKEN" | python3 -c "import json,sys; d=json.load(sys.stdin); print('GRANTED:', sorted(p['permission'] for p in d.get('data',[]) if p.get('status')=='granted')); print('ERROR:', d.get('error',{}).get('message'))"
+          curl -s "https://graph.facebook.com/v24.0/$IG_USER_ID/media?fields=id,comments_count&limit=1&access_token=$IG_TOKEN" | python3 -c "import json,sys,os; d=json.load(sys.stdin); m=(d.get('data') or [{}])[0]; print('MEDIA', m.get('id'), m.get('comments_count'))" 
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
