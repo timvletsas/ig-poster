@@ -67,6 +67,23 @@ def is_video(p):
     return p.lower().endswith(VIDEO_EXT)
 
 
+def make_cover(post, num):
+    """Render the branded Spotlight cover from the first artwork image and push it so Instagram can fetch it."""
+    from cover import render_cover
+    src = next(m for m in post["media"] if m != "COVER" and not is_video(m))
+    dst = os.path.join(os.path.dirname(src), "cover.jpg")
+    sp = post.get("spotlight") or {}
+    render_cover(src, dst, num, sp.get("title", ""), sp.get("artist", ""))
+    for attempt in range(4):
+        git("add", dst)
+        git("commit", "-m", f"cover for {post['id']}", check=False)
+        if git("push", "origin", f"HEAD:{BRANCH}", check=False).returncode == 0:
+            break
+        git("pull", "--rebase", "origin", BRANCH, check=False)
+    post["media"] = [dst if m == "COVER" else m for m in post["media"]]
+    time.sleep(12)
+
+
 def handle(post):
     a = (post.get("artist") or "").strip().lstrip("@")
     return a if a and a.lower() != "artist" else ""
@@ -194,8 +211,15 @@ def main():
     results = {}
     for p in due[:MAX_PER_RUN]:
         log(f"Publishing {p['id']} ({p['type']})")
+        num = week_no(q["posts"], sum(1 for r in results.values() if r["status"] == "posted"))
         if "{week_no}" in p.get("caption", ""):
-            p["caption"] = p["caption"].replace("{week_no}", str(week_no(q["posts"], sum(1 for r in results.values() if r["status"] == "posted"))))
+            p["caption"] = p["caption"].replace("{week_no}", str(num))
+        if "COVER" in p.get("media", []):
+            try:
+                make_cover(p, num)
+            except Exception as e:
+                log("  cover failed, posting without it:", e)
+                p["media"] = [m for m in p["media"] if m != "COVER"]
         stamp = now.isoformat().replace("+00:00", "Z")
         try:
             try:
