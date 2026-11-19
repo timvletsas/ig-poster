@@ -101,9 +101,9 @@ def build_spot(post):
     import spot
     from PIL import Image
     imgs = [m for m in post["media"] if not is_video(m)]
-    if not imgs:
+    src = imgs[0] if imgs else art_src(post)   # video-only posts: use a frame from the first video
+    if not src:
         return
-    src = imgs[0]
     folder = os.path.dirname(src)
     with Image.open(src) as im:
         ratio = im.width / im.height

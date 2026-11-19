@@ -83,7 +83,7 @@
       ],
       "account": "17841413162252894",
       "source": "waltz-comp-breakdown",
-      "spot": false,
+      "spot": true,
       "spotlight": {
         "title": "Waltz Cycle"
       },
