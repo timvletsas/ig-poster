@@ -56,12 +56,14 @@
       "artist": "",
       "category": "Quiz",
       "scheduled_at": "2026-11-19T14:48:52.000Z",
-      "status": "scheduled",
+      "status": "failed",
       "created_at": "2026-11-19T14:16:52.000Z",
       "tag_artist": false,
       "collab": false,
       "hashes": [],
-      "account": "17841426491047132"
+      "account": "17841426491047132",
+      "error": "Timed out waiting for Instagram to process media",
+      "failed_at": "2026-11-19T15:01:12.525861Z"
     },
     {
       "id": "bl1a1f42adc23",
