@@ -1,0 +1,10 @@
+{
+  "pages": [
+    {
+      "key": "biblelegendsapp",
+      "ig_user_id": "17841426491047132",
+      "queue": "queues/biblelegendsapp.json",
+      "stats": "stats/biblelegendsapp.json"
+    }
+  ]
+}
