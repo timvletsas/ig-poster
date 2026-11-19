@@ -8,6 +8,8 @@ import requests
 API = "https://graph.facebook.com/v24.0"
 TOKEN = os.environ.get("IG_TOKEN", "")
 IG_ID = os.environ.get("IG_USER_ID", "")
+QUEUE = os.environ.get("QUEUE_FILE", "queue.json")   # other pages: queues/<page>.json
+STATS = os.environ.get("STATS_FILE", "stats.json")
 REPO = os.environ["GITHUB_REPOSITORY"]
 BRANCH = os.environ.get("GITHUB_REF_NAME", "main")
 MAX_PER_RUN = 3
@@ -358,7 +360,7 @@ def snapshot():
     """Once per day: save account stats so the app can track growth / followers lost."""
     today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
     try:
-        stats = json.load(open("stats.json", encoding="utf-8"))
+        stats = json.load(open(STATS, encoding="utf-8"))
     except Exception:
         stats = {"daily": [], "online": {}}
     if any(d.get("date") == today for d in stats["daily"]):
@@ -389,17 +391,18 @@ def save(results, stats, cycle=None):
         git("fetch", "origin", BRANCH)
         git("reset", "--hard", f"origin/{BRANCH}")
         if results or cycle:
-            q = json.load(open("queue.json", encoding="utf-8"))
+            q = json.load(open(QUEUE, encoding="utf-8"))
             if cycle:
                 q.setdefault("cycle", {}).update(cycle)
             for p in q["posts"]:
                 if p["id"] in results:
                     p.update(results[p["id"]])
-            json.dump(q, open("queue.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False)
-            git("add", "queue.json")
+            json.dump(q, open(QUEUE, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+            git("add", QUEUE)
         if stats:
-            json.dump(stats, open("stats.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
-            git("add", "stats.json")
+            os.makedirs(os.path.dirname(STATS) or ".", exist_ok=True)
+            json.dump(stats, open(STATS, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+            git("add", STATS)
         if git("commit", "-m", "bot: update status/stats", check=False).returncode != 0:
             return
         if git("push", "origin", f"HEAD:{BRANCH}", check=False).returncode == 0:
@@ -418,7 +421,7 @@ def main():
         stats = snapshot()
     except Exception as e:
         log("Stats snapshot error:", e)
-    q = json.load(open("queue.json", encoding="utf-8"))
+    q = json.load(open(QUEUE, encoding="utf-8"))
     now = datetime.datetime.now(datetime.timezone.utc)
     due = [p for p in q["posts"] if p.get("status") == "scheduled"
            and datetime.datetime.fromisoformat(p["scheduled_at"].replace("Z", "+00:00")) <= now]
@@ -455,7 +458,7 @@ def main():
         log("Nothing due.")
     cyc_update = None
     try:
-        q2 = json.load(open("queue.json", encoding="utf-8"))
+        q2 = json.load(open(QUEUE, encoding="utf-8"))
         for p in q2["posts"]:
             if p["id"] in results: p.update(results[p["id"]])
         cyc_update = run_cycle(q2, q2.get("cycle") or {})

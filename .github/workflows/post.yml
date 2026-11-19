@@ -29,3 +29,8 @@ jobs:
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      - name: Other pages
+        if: always()
+        run: python pages_run.py
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
