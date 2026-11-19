@@ -129,9 +129,9 @@ def nominee_end(src, dst, num, artist, ratio):
     W, H = 1080, int(round(1080 / ratio))
     img = blurred_bg(src, W, H); cx = W / 2
     k = min(1.0, H / 1150)                       # shrink the layout on landscape / square posts
-    y = H * .5 - 520 * k                          # content block (~1040*k tall) centered vertically
-    pill(img, cx, y, f"NOMINEE #{num} OF 5", fb(30, k), center=True); d = ImageDraw.Draw(img)
-    y += 120 * k; d.text((cx, y), "VOTE ON", font=fb(64, k), fill=WHITE, anchor="ms")
+    y = (H - 760 * k) / 2                         # content block (~760*k tall) centered vertically
+    pill(img, cx, y, f"NOMINEE #{num} OF 5", fb(30, k), center=True, pad=(int(18 * k), int(10 * k))); d = ImageDraw.Draw(img)
+    y += 135 * k; d.text((cx, y), "VOTE ON", font=fb(64, k), fill=WHITE, anchor="ms")
     y += 150 * k; grad_text(img, cx, y, "SATURDAY", int(150 * k), maxw=W - 120); d = ImageDraw.Draw(img)
     y += 70 * k; d.text((cx, y), "for the Artwork of the Week", font=fm(42, k), fill=WHITE, anchor="ms")
     y += 60 * k; d.text((cx, y), "Winners revealed on Sunday", font=fm(32, k), fill=(210, 210, 225), anchor="ms")
