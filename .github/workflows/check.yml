@@ -1,0 +1,25 @@
+name: check accounts
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  c:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import os, json, urllib.request, urllib.parse
+          T=os.environ["IG_TOKEN"]; B="1975815129175633"; A="https://graph.facebook.com/v24.0/"
+          def g(path, **p):
+              p["access_token"]=T
+              try: return json.load(urllib.request.urlopen(A+path+"?"+urllib.parse.urlencode(p)))
+              except urllib.error.HTTPError as e: return json.load(e)
+          def show(label, r):
+              r=json.loads(json.dumps(r).replace(T,"***")); r.pop("paging",None); print(label, json.dumps(r))
+          show("pages", g("me/accounts", fields="name,instagram_business_account{id,username}"))
+          show("owned_ig", g(B+"/owned_instagram_accounts", fields="id,username"))
+          show("ig_business", g(B+"/instagram_business_accounts", fields="id,username"))
+          show("client_ig", g(B+"/client_instagram_accounts", fields="id,username"))
+          PY
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
