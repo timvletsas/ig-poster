@@ -72,6 +72,23 @@ def handle(post):
     return a if a and a.lower() != "artist" else ""
 
 
+def week_no(queue_posts, extra_posted):
+    """How many-th post of this week (Mon-Sun, Greece time) this one is."""
+    try:
+        from zoneinfo import ZoneInfo
+        tz = ZoneInfo("Europe/Athens")
+    except Exception:
+        tz = datetime.timezone.utc
+    now = datetime.datetime.now(tz)
+    monday = (now - datetime.timedelta(days=now.weekday())).replace(hour=0, minute=0, second=0, microsecond=0)
+    n = extra_posted
+    for p in queue_posts:
+        t = p.get("posted_at")
+        if p.get("status") == "posted" and t and datetime.datetime.fromisoformat(t.replace("Z", "+00:00")).astimezone(tz) >= monday:
+            n += 1
+    return n + 1
+
+
 def publish(post, with_tags=True):
     media = post["media"]
     caption = post.get("caption", "")
@@ -177,6 +194,8 @@ def main():
     results = {}
     for p in due[:MAX_PER_RUN]:
         log(f"Publishing {p['id']} ({p['type']})")
+        if "{week_no}" in p.get("caption", ""):
+            p["caption"] = p["caption"].replace("{week_no}", str(week_no(q["posts"], sum(1 for r in results.values() if r["status"] == "posted"))))
         stamp = now.isoformat().replace("+00:00", "Z")
         try:
             try:
@@ -187,7 +206,7 @@ def main():
                     mid, link = publish(p, with_tags=False)
                 else:
                     raise
-            results[p["id"]] = {"status": "posted", "posted_at": stamp, "ig_media_id": mid, "permalink": link, "error": None}
+            results[p["id"]] = {"status": "posted", "posted_at": stamp, "ig_media_id": mid, "permalink": link, "error": None, "caption": p.get("caption", "")}
             log("  posted:", link)
         except Exception as e:
             results[p["id"]] = {"status": "failed", "error": str(e), "failed_at": stamp}
