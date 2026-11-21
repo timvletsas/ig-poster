@@ -75,12 +75,16 @@
       "artist": "",
       "category": "Verse",
       "scheduled_at": "2026-11-21T19:00:00.000Z",
-      "status": "scheduled",
+      "status": "posted",
       "created_at": "2026-11-19T14:16:52.000Z",
       "tag_artist": false,
       "collab": false,
       "hashes": [],
-      "account": "17841426491047132"
+      "account": "17841426491047132",
+      "posted_at": "2026-11-21T19:01:01.815655Z",
+      "ig_media_id": "18126789481934799",
+      "permalink": "https://www.instagram.com/reel/DgA7tb0iRUy/",
+      "error": null
     },
     {
       "id": "bl1a1f42adc24",
