@@ -1136,5 +1136,10 @@
     "enabled": true,
     "sat": "12:00",
     "sun": "09:00"
+  },
+  "cycle": {
+    "2026-W47": {
+      "vote_skipped": true
+    }
   }
 }
