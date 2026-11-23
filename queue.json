@@ -35,16 +35,20 @@
       "id": "mwmgmj6sk5pk",
       "type": "CAROUSEL",
       "media": [
+        "media/mwmgmj6sk5pk/s_cover.jpg",
         "media/mwmgmj6sk5pk/1.jpg",
         "media/mwmgmj6sk5pk/2.jpg",
         "media/mwmgmj6sk5pk/3.jpg",
-        "media/mwmgmj6sk5pk/4.mp4"
+        "media/mwmgmj6sk5pk/4.mp4",
+        "media/mwmgmj6sk5pk/s_detail1.jpg",
+        "media/mwmgmj6sk5pk/s_detail2.jpg",
+        "media/mwmgmj6sk5pk/s_end.jpg"
       ],
-      "caption": "🏆 Nominee {nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Montreal Samurai”\n\nDrop a 🔥 if this deserves more attention\n\nInspiration for every 3D artist out there 💡\n\n🎨 @elias_villagomez\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #blender3d #gameart #3dmodeling",
+      "caption": "🏆 Nominee 1 of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Montreal Samurai”\n\nDrop a 🔥 if this deserves more attention\n\nInspiration for every 3D artist out there 💡\n\n🎨 @elias_villagomez\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dcharacter #blender3d #gameart #3dmodeling",
       "artist": "@elias_villagomez",
       "category": "Characters",
       "scheduled_at": "2026-11-23T07:00:00.000Z",
-      "status": "scheduled",
+      "status": "posted",
       "created_at": "2026-11-18T18:33:46.350Z",
       "tag_artist": true,
       "collab": true,
@@ -60,7 +64,11 @@
       "spotlight": {
         "title": "Montreal Samurai"
       },
-      "nominee": true
+      "nominee": true,
+      "posted_at": "2026-11-23T07:00:59.578987Z",
+      "ig_media_id": "18034074422686057",
+      "permalink": "https://www.instagram.com/p/DgEzJVTgAQf/",
+      "error": null
     },
     {
       "id": "mwmgmpqsuhn8",
