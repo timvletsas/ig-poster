@@ -74,14 +74,18 @@
       "id": "mwmgmpqsuhn8",
       "type": "CAROUSEL",
       "media": [
+        "media/mwmgmpqsuhn8/s_cover.jpg",
         "media/mwmgmpqsuhn8/1.mp4",
-        "media/mwmgmpqsuhn8/2.mp4"
+        "media/mwmgmpqsuhn8/2.mp4",
+        "media/mwmgmpqsuhn8/s_detail1.jpg",
+        "media/mwmgmpqsuhn8/s_detail2.jpg",
+        "media/mwmgmpqsuhn8/s_end.jpg"
       ],
-      "caption": "🏆 Nominee {nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Waltz Cycle”\n\nDrop a 🔥 if this deserves more attention\n\nFeaturing the best 3D artists out there. Follow so you never miss one 👑\n\n🎨 @galravidtal\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3dmodeling #3dart #3dmodel",
+      "caption": "🏆 Nominee 2 of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Waltz Cycle”\n\nDrop a 🔥 if this deserves more attention\n\nFeaturing the best 3D artists out there. Follow so you never miss one 👑\n\n🎨 @galravidtal\n\n📩 3D artist? DM us your work to get featured on our page!\n\n#3droyals #characterdesign #3dmodeling #3dart #3dmodel",
       "artist": "@galravidtal",
       "category": "Characters",
       "scheduled_at": "2026-11-24T10:00:00.000Z",
-      "status": "scheduled",
+      "status": "posted",
       "created_at": "2026-11-18T18:33:54.678Z",
       "tag_artist": true,
       "collab": true,
@@ -95,7 +99,11 @@
       "spotlight": {
         "title": "Waltz Cycle"
       },
-      "nominee": true
+      "nominee": true,
+      "posted_at": "2026-11-24T10:01:00.936676Z",
+      "ig_media_id": "18151502725565459",
+      "permalink": "https://www.instagram.com/p/DgHsf1ZDM_c/",
+      "error": null
     },
     {
       "id": "mwmgn5o11lw0",
