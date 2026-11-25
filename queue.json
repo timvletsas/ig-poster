@@ -140,16 +140,20 @@
       "id": "mwmgnas5k1l4",
       "type": "CAROUSEL",
       "media": [
+        "media/mwmgnas5k1l4/s_cover.jpg",
         "media/mwmgnas5k1l4/1.jpg",
         "media/mwmgnas5k1l4/2.jpg",
         "media/mwmgnas5k1l4/3.mp4",
-        "media/mwmgnas5k1l4/4.jpg"
+        "media/mwmgnas5k1l4/4.jpg",
+        "media/mwmgnas5k1l4/s_detail1.jpg",
+        "media/mwmgnas5k1l4/s_detail2.jpg",
+        "media/mwmgnas5k1l4/s_end.jpg"
       ],
-      "caption": "🏆 Nominee {nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“She's a smoker”\n\nWhat detail caught your eye first? 👇\n\nThe amount of care in this piece is amazing 🤯\n\n🎨 Jordi Soriano on artstation\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #3dcommunity #digitalart #3dmodeling",
+      "caption": "🏆 Nominee 3 of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“She's a smoker”\n\nWhat detail caught your eye first? 👇\n\nThe amount of care in this piece is amazing 🤯\n\n🎨 Jordi Soriano on artstation\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #3dcommunity #digitalart #3dmodeling",
       "artist": "@Jordi Soriano",
       "category": "Characters",
       "scheduled_at": "2026-11-25T06:00:00.000Z",
-      "status": "scheduled",
+      "status": "posted",
       "created_at": "2026-11-18T18:34:21.943Z",
       "tag_artist": false,
       "collab": true,
@@ -165,7 +169,11 @@
       "spotlight": {
         "title": "She's a smoker"
       },
-      "nominee": true
+      "nominee": true,
+      "posted_at": "2026-11-25T06:01:00.358838Z",
+      "ig_media_id": "18138791122797554",
+      "permalink": "https://www.instagram.com/p/DgJ1zj7CL_P/",
+      "error": null
     },
     {
       "id": "mwmgngdmgnuh",
