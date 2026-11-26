@@ -280,15 +280,19 @@
     },
     {
       "id": "mwmgo1igizlz",
-      "type": "IMAGE",
+      "type": "CAROUSEL",
       "media": [
-        "media/mwmgo1igizlz/1.jpg"
+        "media/mwmgo1igizlz/s_cover.jpg",
+        "media/mwmgo1igizlz/1.jpg",
+        "media/mwmgo1igizlz/s_detail1.jpg",
+        "media/mwmgo1igizlz/s_detail2.jpg",
+        "media/mwmgo1igizlz/s_end.jpg"
       ],
-      "caption": "🏆 Nominee {nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Seagull Fighter”\n\nTag someone who would love this 👇\n\nWhen skill meets patience, this happens ✨\n\n🎨 @gordei2d\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #3dmodeling #3drender #digitalart",
+      "caption": "🏆 Nominee 4 of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Seagull Fighter”\n\nTag someone who would love this 👇\n\nWhen skill meets patience, this happens ✨\n\n🎨 @gordei2d\n\n🎨 Artists: DM us your best 3D work for a chance to be featured!\n\n#3droyals #characterdesign #3dmodeling #3drender #digitalart",
       "artist": "@gordei2d",
       "category": "Characters",
       "scheduled_at": "2026-11-26T06:00:00.000Z",
-      "status": "scheduled",
+      "status": "posted",
       "created_at": "2026-11-18T18:34:56.395Z",
       "tag_artist": true,
       "collab": true,
@@ -301,7 +305,11 @@
       "spotlight": {
         "title": "Seagull Fighter"
       },
-      "nominee": true
+      "nominee": true,
+      "posted_at": "2026-11-26T06:00:58.648704Z",
+      "ig_media_id": "18082831331724311",
+      "permalink": "https://www.instagram.com/p/DgMaiadDUNE/",
+      "error": null
     },
     {
       "id": "mwmgo4m6akjx",
