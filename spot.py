@@ -315,3 +315,68 @@ def podium_tpl(srcs, names, dst, week_label):
     out = bg.resize((1080, int(1536 * _SCALE)), Image.LANCZOS).crop((0, _CROP_Y, 1080, _CROP_Y + 1350))
     out.save(dst, "JPEG", quality=92)
     return [(((l + r) / 2 * _SCALE) / 1080, (((t + b) / 2) * _SCALE - _CROP_Y) / 1350) for (l, t, r, b) in _PODIUM_SLOTS[:len(srcs)]]
+
+
+# ---------- certificate + logo (Tim's brand) ----------
+CERT_TPL = os.path.join(os.path.dirname(PODIUM_TPL), "certificate.png")
+LOGO_W = os.path.join(os.path.dirname(PODIUM_TPL), "logo_white.png")
+_PLACE = {1: ("WINNER", (232, 190, 92)), 2: ("2ND PLACE", (205, 210, 220)), 3: ("3RD PLACE", (205, 140, 100))}
+
+
+def brand_logo(width, gold=False, alpha=1.0):
+    im = Image.open(LOGO_W).convert("RGBA"); im = im.resize((width, int(im.height * width / im.width)), Image.LANCZOS)
+    a = im.getchannel("A").point(lambda v: int(v * alpha))
+    if not gold:
+        im.putalpha(a); return im
+    g = Image.new("RGB", (1, 3)); g.putpixel((0, 0), (250, 224, 150)); g.putpixel((0, 1), (214, 164, 62)); g.putpixel((0, 2), (170, 118, 40))
+    g = g.resize(im.size, Image.BILINEAR).convert("RGBA"); g.putalpha(a); return g
+
+
+def certificate(src, dst, credit_, title, place, week_label, story=False):
+    W, H = (1080, 1920) if story else (1080, 1350)
+    base = Image.open(CERT_TPL).convert("RGB")
+    if story:
+        base = base.resize((1280, 1920), Image.LANCZOS).crop((100, 0, 1180, 1920))
+    else:
+        base = base.resize((1080, 1620), Image.LANCZOS).crop((0, 170, 1080, 1520))
+    img = base.convert("RGBA")
+    label, col = _PLACE.get(place, _PLACE[1])
+    pw, ph = (640, 800) if story else (540, 675)
+    x0, y0 = (W - pw) // 2, (360 if story else 150)
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(sh).rectangle([x0 - 6, y0 + 10, x0 + pw + 6, y0 + ph + 22], fill=(0, 0, 0, 170))
+    img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(18))); d = ImageDraw.Draw(img)
+    d.rectangle([x0 - 10, y0 - 10, x0 + pw + 9, y0 + ph + 9], outline=col, width=3)
+    d.rectangle([x0 - 18, y0 - 18, x0 + pw + 17, y0 + ph + 17], outline=col + (110,), width=1)
+    img.paste(_fill(Image.open(src), pw, ph), (x0, y0)); d = ImageDraw.Draw(img)
+    k = 1.1 if story else 1.0
+    d.text((W / 2, 290 if story else 72), "ARTWORK OF THE WEEK", font=fb(31 * k), fill=(232, 190, 92), anchor="mm")
+    main, sub = (credit_[:-len(" on ArtStation")], "on ArtStation") if credit_.endswith(" on ArtStation") else (credit_, "")
+    y = y0 + ph + int(80 * k); f = fb(50 * k)
+    while d.textlength(main, font=f) > W - 140 and f.size > 20: f = fb(f.size - 2)
+    d.text((W / 2, y), main, font=f, fill=(255, 255, 255), anchor="mm")
+    line2 = "  ".join(x for x in [f"“{title}”" if title else "", sub] if x)
+    if line2:
+        y += int(55 * k); f2 = fm(32 * k)
+        while d.textlength(line2, font=f2) > W - 140 and f2.size > 16: f2 = fm(f2.size - 2)
+        d.text((W / 2, y), line2, font=f2, fill=(225, 215, 230), anchor="mm")
+    y += int(48 * k); d.line([(W / 2 - 75, y), (W / 2 + 75, y)], fill=col, width=2)
+    d.text((W / 2, y + int(40 * k)), f"{label} · {week_label}", font=fb(27 * k), fill=col, anchor="mm")
+    L = brand_logo(300 if story else 330, gold=True)
+    img.alpha_composite(L, ((W - L.width) // 2, (H - 220 - L.height) if story else (H - 55 - L.height)))
+    img.convert("RGB").save(dst, "JPEG", quality=92)
+
+
+def watermark(path, width=260, bottom=45, alpha=.55):
+    im = Image.open(path).convert("RGBA"); L = brand_logo(width, alpha=alpha)
+    im.alpha_composite(L, ((im.width - L.width) // 2, im.height - bottom - L.height)); im.convert("RGB").save(path, "JPEG", quality=92)
+
+
+def to_story(feed_path, dst):
+    """Extend a 1080x1350 dark post to 1080x1920: dark space above, floor fading to black below."""
+    p = Image.open(feed_path).convert("RGB"); W, H, top = 1080, 1920, 285
+    c = Image.new("RGB", (W, H), (6, 6, 8))
+    tc = p.crop((0, 0, W, 4)).resize((1, 1), Image.BOX).getpixel((0, 0)); c.paste(tc, (0, 0, W, top))
+    c.paste(p, (0, top)); last = p.crop((0, p.height - 1, W, p.height))
+    for i in range(H - top - p.height):
+        kk = max(0, 1 - i / 220); c.paste(Image.blend(Image.new("RGB", (W, 1), (6, 6, 8)), last, kk), (0, top + p.height + i))
+    c.save(dst, "JPEG", quality=92)

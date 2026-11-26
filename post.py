@@ -273,7 +273,7 @@ def run_cycle(q, cyc):
         cap = (f"🗳 VOTE: Artwork of the Week\n\nComment the number of your favorite 👇\n\n{lines}\n\n"
                f"🏆 Winners revealed tomorrow!\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dart #3dartist #artoftheweek #3dcommunity")
         mid = publish_images([cover, *slides], cap, tags=[None] + [ig_handle(p.get("artist")) for p in noms])
-        state.update({"vote_id": mid, "nominees": [{"id": p["id"], "artist": p.get("artist"), "src": art_src(p), "media_id": p.get("ig_media_id")} for p in noms]})
+        state.update({"vote_id": mid, "nominees": [{"id": p["id"], "artist": p.get("artist"), "src": art_src(p), "media_id": p.get("ig_media_id"), "title": (p.get("spotlight") or {}).get("title") or ""} for p in noms]})
         log("Cycle: vote posted", mid)
         try:
             state["vote_story"] = publish_story(story)
@@ -297,9 +297,20 @@ def run_cycle(q, cyc):
         else:
             spot.podium(srcs, shorts, pod)
         slides, stories = [], []
-        for k, w in enumerate(win):
-            pth = f"{folder}/winner_{k + 1}.jpg"; spot.winner_slide(w["src"], pth, k + 1, spot.credit(w["artist"])); slides.append(pth)
-            st_ = f"{folder}/winner_story_{k + 1}.jpg"; spot.winner_story(w["src"], st_, k + 1, spot.credit(w["artist"])); stories.append(st_)
+        if os.path.exists(spot.CERT_TPL):
+            wl = f"WEEK {int(wk.split('W')[-1])} · {wk[:4]}"
+            if os.path.exists(spot.LOGO_W):
+                spot.watermark(pod)
+            for k, w in enumerate(win):
+                pth = f"{folder}/winner_{k + 1}.jpg"
+                spot.certificate(w["src"], pth, spot.credit(w["artist"]), w.get("title", ""), k + 1, wl); slides.append(pth)
+            ps = f"{folder}/podium_story.jpg"; spot.to_story(pod, ps); stories.append(ps)
+            cs = f"{folder}/certificate_story.jpg"
+            spot.certificate(win[0]["src"], cs, spot.credit(win[0]["artist"]), win[0].get("title", ""), 1, wl, story=True); stories.append(cs)
+        else:
+            for k, w in enumerate(win):
+                pth = f"{folder}/winner_{k + 1}.jpg"; spot.winner_slide(w["src"], pth, k + 1, spot.credit(w["artist"])); slides.append(pth)
+                st_ = f"{folder}/winner_story_{k + 1}.jpg"; spot.winner_story(w["src"], st_, k + 1, spot.credit(w["artist"])); stories.append(st_)
         push_files([pod, *slides, *stories], f"results {wk}")
         medal = ["🥇", "🥈", "🥉"]
         lines = "\n".join(f"{medal[k]} {spot.credit(w['artist'])}" + (f" ({votes[order[k]]} votes)" if use_votes else "") for k, w in enumerate(win))
