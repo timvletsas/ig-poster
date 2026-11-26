@@ -196,7 +196,8 @@ def publish_images(paths, caption, tags=None, collaborators=None):
         data = {"image_url": raw_url(pth), "is_carousel_item": "true"}
         u = (tags or [None] * len(paths))[i]
         if u:
-            data["user_tags"] = json.dumps([{"username": u, "x": 0.5, "y": 0.9}])
+            spots = u if isinstance(u, list) else [(u, 0.5, 0.9)]
+            data["user_tags"] = json.dumps([{"username": n, "x": round(x, 3), "y": round(y, 3)} for n, x, y in spots if n])
         try:
             k = api_post(f"{IG_ID}/media", data)["id"]
         except Exception:
@@ -289,7 +290,12 @@ def run_cycle(q, cyc):
         order = sorted(range(n), key=lambda i: -score[i])[:3]
         win = [noms[i] for i in order]
         srcs = [w["src"] for w in win]; shorts = [spot.short(w["artist"]) for w in win]
-        pod = f"{folder}/podium.jpg"; spot.podium(srcs, shorts, pod)
+        pod = f"{folder}/podium.jpg"; pod_tags = None
+        if os.path.exists(spot.PODIUM_TPL):
+            spots = spot.podium_tpl(srcs, [spot.credit(w["artist"]) for w in win], pod, f"Week {int(wk.split('W')[-1])}")
+            pod_tags = [(ig_handle(w["artist"]), x, y) for w, (x, y) in zip(win, spots) if ig_handle(w["artist"])] or None
+        else:
+            spot.podium(srcs, shorts, pod)
         slides, stories = [], []
         for k, w in enumerate(win):
             pth = f"{folder}/winner_{k + 1}.jpg"; spot.winner_slide(w["src"], pth, k + 1, spot.credit(w["artist"])); slides.append(pth)
@@ -300,7 +306,7 @@ def run_cycle(q, cyc):
         cap = (f"🏆 Artwork of the Week: RESULTS\n\n{lines}\n\nCongrats to the winners and thank you for voting! 👑\n"
                f"New nominees start Monday, vote again on Saturday 🗳\n\n🎨 Are you a 3D artist and want to be featured? Send us a DM 📩\n\n#3droyals #3dart #3dartist #artoftheweek #3dcommunity")
         collabs = list(dict.fromkeys(h for h in (ig_handle(w["artist"]) for w in win) if h))
-        mid = publish_images([pod, *slides], cap, tags=[None] + [ig_handle(w["artist"]) for w in win], collaborators=collabs)
+        mid = publish_images([pod, *slides], cap, tags=[pod_tags] + [ig_handle(w["artist"]) for w in win], collaborators=collabs)
         state.update({"results_id": mid, "winners": [w["id"] for w in win], "votes": votes, "ranked_by": "votes" if use_votes else "engagement"})
         log("Cycle: results posted", mid)
         for k, st_ in enumerate(stories):

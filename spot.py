@@ -279,3 +279,39 @@ def winner_story(src, dst, place, handle):
     d.text((cx, y2), handle, font=fb(56), fill=LILAC, anchor="ms")
     d.text((cx, y2 + 70), f"on {BRAND}", font=fm(36), fill=WHITE, anchor="ms")
     accent_bar(img, 1); img.save(dst, "JPEG", quality=92)
+
+
+# ---------- template podium (Tim's design: templates/podium.png, 1024x1536) ----------
+PODIUM_TPL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "templates", "podium.png")
+_PODIUM_SLOTS = [(354, 460, 671, 874), (53, 541, 324, 900), (701, 588, 973, 939)]   # 1st, 2nd, 3rd frames
+_PODIUM_TEXT = [(512, 990, (245, 196, 81)), (190, 1000, (200, 205, 215)), (841, 1040, (205, 140, 100))]
+_SCALE, _CROP_Y = 1080 / 1024, 110   # template -> 1080x1350
+
+
+def _fill(im, w, h):
+    im = ImageOps.exif_transpose(im).convert("RGB"); r = max(w / im.width, h / im.height)
+    im = im.resize((int(im.width * r) + 1, int(im.height * r) + 1), Image.LANCZOS)
+    x, y = (im.width - w) // 2, (im.height - h) // 2
+    return im.crop((x, y, x + w, y + h))
+
+
+def podium_tpl(srcs, names, dst, week_label):
+    """names = display credits (@handle or 'Name on ArtStation'). Returns tag spots [(x, y)] as 0..1 for each place."""
+    bg = Image.open(PODIUM_TPL).convert("RGB")
+    for src, (l, t, r, b) in zip(srcs, _PODIUM_SLOTS):
+        bg.paste(_fill(Image.open(src), r - l, b - t), (l, t))
+    d = ImageDraw.Draw(bg)
+    for k, (name, (cx, y, col)) in enumerate(zip(names, _PODIUM_TEXT)):
+        d.text((cx, y), str(k + 1), font=fb(90), fill=col, anchor="mm")
+        main, sub = (name[:-len(" on ArtStation")], "on ArtStation") if name.endswith(" on ArtStation") else (name, "")
+        f = fb(22) if k == 0 else fm(20)
+        while d.textlength(main, font=f) > 270 and f.size > 12:
+            f = ImageFont.truetype(f.path, f.size - 1)
+        d.text((cx, y + 80), main, font=f, fill=(235, 235, 240), anchor="mm")
+        if sub:
+            d.text((cx, y + 108), sub, font=fm(16), fill=(170, 175, 190), anchor="mm")
+    d.text((512, 150), "ARTWORK OF THE WEEK", font=fb(30), fill=(245, 196, 81), anchor="mm")
+    d.text((512, 200), f"{week_label} · Winners", font=fb(52), fill=(255, 255, 255), anchor="mm")
+    out = bg.resize((1080, int(1536 * _SCALE)), Image.LANCZOS).crop((0, _CROP_Y, 1080, _CROP_Y + 1350))
+    out.save(dst, "JPEG", quality=92)
+    return [(((l + r) / 2 * _SCALE) / 1080, (((t + b) / 2) * _SCALE - _CROP_Y) / 1350) for (l, t, r, b) in _PODIUM_SLOTS[:len(srcs)]]
