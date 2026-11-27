@@ -367,15 +367,18 @@
       "id": "mwmgobwlle12",
       "type": "CAROUSEL",
       "media": [
+        "media/mwmgobwlle12/s_cover.jpg",
         "media/mwmgobwlle12/1.jpg",
         "media/mwmgobwlle12/2.mp4",
-        "media/mwmgobwlle12/3.mp4"
+        "media/mwmgobwlle12/3.mp4",
+        "media/mwmgobwlle12/s_detail1.jpg",
+        "media/mwmgobwlle12/s_end.jpg"
       ],
-      "caption": "🏆 Nominee {nominee_no} of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Rick and Morty Fan Art”\n\nGive this artist a 👑 in the comments\n\nThe 3D community never stops raising the bar 🚀\n\n🎨 @sina_piruzfar\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3ddesign #3dartist #digitalart",
+      "caption": "🏆 Nominee 5 of 5 · Artwork of the Week\n🗳 Vote on Saturday, winners revealed Sunday!\n\n“Rick and Morty Fan Art”\n\nGive this artist a 👑 in the comments\n\nThe 3D community never stops raising the bar 🚀\n\n🎨 @sina_piruzfar\n\n👑 Want your 3D art featured here? Send us a message 📩\n\n#3droyals #characterdesign #3ddesign #3dartist #digitalart",
       "artist": "@sina_piruzfar",
       "category": "Characters",
       "scheduled_at": "2026-11-27T20:00:00.000Z",
-      "status": "scheduled",
+      "status": "posted",
       "created_at": "2026-11-18T18:35:10.015Z",
       "tag_artist": true,
       "collab": true,
@@ -390,7 +393,11 @@
       "spotlight": {
         "title": "Rick and Morty Fan Art"
       },
-      "nominee": true
+      "nominee": true,
+      "posted_at": "2026-11-27T20:01:04.125172Z",
+      "ig_media_id": "17878141809662187",
+      "permalink": "https://www.instagram.com/p/DgQfpUSgseh/",
+      "error": null
     },
     {
       "id": "mwmgolk88fwd",
