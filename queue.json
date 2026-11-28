@@ -1179,6 +1179,47 @@
   "cycle": {
     "2026-W47": {
       "vote_skipped": true
+    },
+    "2026-W48": {
+      "vote_id": "18135175996891221",
+      "nominees": [
+        {
+          "id": "mwmgmj6sk5pk",
+          "artist": "@elias_villagomez",
+          "src": "media/mwmgmj6sk5pk/1.jpg",
+          "media_id": "18034074422686057",
+          "title": "Montreal Samurai"
+        },
+        {
+          "id": "mwmgmpqsuhn8",
+          "artist": "@galravidtal",
+          "src": "media/mwmgmpqsuhn8/s_frame.jpg",
+          "media_id": "18151502725565459",
+          "title": "Waltz Cycle"
+        },
+        {
+          "id": "mwmgnas5k1l4",
+          "artist": "@Jordi Soriano",
+          "src": "media/mwmgnas5k1l4/1.jpg",
+          "media_id": "18138791122797554",
+          "title": "She's a smoker"
+        },
+        {
+          "id": "mwmgo1igizlz",
+          "artist": "@gordei2d",
+          "src": "media/mwmgo1igizlz/1.jpg",
+          "media_id": "18082831331724311",
+          "title": "Seagull Fighter"
+        },
+        {
+          "id": "mwmgobwlle12",
+          "artist": "@sina_piruzfar",
+          "src": "media/mwmgobwlle12/1.jpg",
+          "media_id": "17878141809662187",
+          "title": "Rick and Morty Fan Art"
+        }
+      ],
+      "vote_story": "18099653696651652"
     }
   }
 }
